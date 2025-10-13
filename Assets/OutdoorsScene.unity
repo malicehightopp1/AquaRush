@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 417434773}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -200}
+  m_LocalPosition: {x: 0, y: 0, z: -216.6}
   m_LocalScale: {x: 40, y: 30, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -728,12 +728,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 5.891533}
+  m_Center: {x: 0, y: 0, z: -1.8731728}
 --- !u!114 &417434776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,6 +853,8 @@ MonoBehaviour:
   - {fileID: 6949073860717389266, guid: 7c7d6e3cd101e8e45ae24cdfb858ec10, type: 3}
   - {fileID: 2936915590611525620, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
   - {fileID: 8919924417309787204, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
+  mNumberOfCoinsSpawned: 5
+  mPrefabSpawnPoint: {fileID: 1363526427}
 --- !u!114 &601703267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,8 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b11a20a45933644a9b963d937884f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSectionMovespeed: 15
-  mSectionOffset: 150
+  mSectionMovespeed: 10
+  mSectionOffset: 100
   mSectionPrefab: {fileID: 8568339448248358143, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
   mSectionSpawn: {fileID: 952237198}
 --- !u!1 &612200387
@@ -2012,7 +2014,7 @@ Transform:
   m_GameObject: {fileID: 1363526426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -75}
+  m_LocalPosition: {x: 0, y: 1, z: -75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2045,11 +2047,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2786806832851589230, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6486972974472662378, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
       propertyPath: m_TagString
-      value: Trigger
+      value: DestroySection
       objectReference: {fileID: 0}
     - target: {fileID: 7456051992615829790, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
       propertyPath: m_LocalPosition.x

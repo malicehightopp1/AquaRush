@@ -13,7 +13,7 @@ public class SSpawningManager : MonoBehaviour
     }
     private void SpawnHandling()
     {
-        GameObject Child = Instantiate(mSectionPrefab , mSectionSpawn);
+        GameObject Child = mSectionPrefab;
         Instantiate(Child, new Vector3(0, 0 , mSectionOffset), Quaternion.identity);
     }
     public void SpawnHandlingGetter()

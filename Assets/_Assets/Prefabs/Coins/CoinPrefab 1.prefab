@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4330322085166549214}
   - component: {fileID: 2092440008899451892}
   - component: {fileID: 73450491413638563}
+  - component: {fileID: 2884715566309327097}
   m_Layer: 0
   m_Name: CoinPrefab_Multiple
   m_TagString: Coin
@@ -72,6 +73,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &2884715566309327097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714024611177098116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &733767232123847904
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,6 +96,7 @@ GameObject:
   - component: {fileID: 5418391921669334528}
   - component: {fileID: 5533561557944685270}
   - component: {fileID: 8381383762546579104}
+  - component: {fileID: 1135337813095752205}
   m_Layer: 0
   m_Name: CoinPrefab_Multiple (3)
   m_TagString: Coin
@@ -144,6 +158,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &1135337813095752205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733767232123847904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3245676721197019694
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +267,7 @@ GameObject:
   - component: {fileID: 6990460612479944436}
   - component: {fileID: 5423073481090529488}
   - component: {fileID: 1083143786943551732}
+  - component: {fileID: 5058934987599886156}
   m_Layer: 0
   m_Name: CoinPrefab_Multiple (2)
   m_TagString: Coin
@@ -302,6 +329,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &5058934987599886156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325424894107976443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3766834470767055329
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +352,7 @@ GameObject:
   - component: {fileID: 1837009819802839127}
   - component: {fileID: 4169961528862877801}
   - component: {fileID: 1106827368743014205}
+  - component: {fileID: 7715162234758701064}
   m_Layer: 0
   m_Name: CoinPrefab_Multiple (1)
   m_TagString: Coin
@@ -374,6 +414,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &7715162234758701064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766834470767055329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5498148271095090753
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +437,7 @@ GameObject:
   - component: {fileID: 2999674875225764331}
   - component: {fileID: 6183723369831767129}
   - component: {fileID: 208320851731061759}
+  - component: {fileID: 2723584990602231254}
   m_Layer: 0
   m_Name: CoinPrefab_Multiple (4)
   m_TagString: Coin
@@ -446,6 +499,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &2723584990602231254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498148271095090753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5654014216651294325
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class SCoinManager : MonoBehaviour
 
     [Header("Coin Spawning")]
     [SerializeField] private List<GameObject> mPrefabList;
+    [SerializeField] private int mNumberOfCoinsSpawned = 0;
+
+    [SerializeField] private Transform mPrefabSpawnPoint;
     private float mzOffset = 0;
     public int CurrentCoins //getter and setter for coins manager
     {
@@ -24,7 +27,7 @@ public class SCoinManager : MonoBehaviour
         mCurrentCoinsText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<TextMeshProUGUI>();         
         mCurrentCoins = 0;
         mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
-        CoinSpawnManager();
+        CoinSpawningManager();
     }
     private void CoinsManager(int CoinsToAdd)
     {
@@ -32,15 +35,15 @@ public class SCoinManager : MonoBehaviour
         mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000);
         mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
     }
-    private void CoinSpawnManager() // managing spawning coins
-    {
-        for(int i = 0; i < 5; i++)
-        {
-            Vector3 spawnx = new Vector3(Random.Range(1.5f, -1.5f) , 1, Random.Range(25, 100));
-            GameObject RandomPrefab = GetRandomObject(mPrefabList);
-            GameObject spawnedObject = Instantiate(RandomPrefab, spawnx, Quaternion.identity);
-        }
-    }
+    //private void CoinSpawnManager() //
+    //{
+    //    for(int i = 0; i < 5; i++)
+    //    {
+    //        Vector3 spawnx = new Vector3(Random.Range(1.5f, -1.5f) , 1, Random.Range(25, 100));
+    //        GameObject RandomPrefab = GetRandomObject(mPrefabList);
+    //        GameObject spawnedObject = Instantiate(RandomPrefab, spawnx, Quaternion.identity);
+    //    }
+    //}
     GameObject GetRandomObject(List<GameObject> list) //picking a random pattern of coins
     {
         int index = Random.Range(0, list.Count);
@@ -48,6 +51,21 @@ public class SCoinManager : MonoBehaviour
     }
     public void CoinSpawnGetter()
     {
-        CoinSpawnManager();
+        CoinSpawningManager();
+    }
+    private void CoinSpawningManager() //reworked coin system to spawn forward
+    {
+        for (int i = 0; i < mNumberOfCoinsSpawned; i++)
+        {
+            if(i >= 4)
+            {
+                mzOffset = 0;
+            }
+            Vector3 SpawnPOS = new Vector3(Random.Range(1.5f, -1.5f), 0 , mzOffset);
+            GameObject RandomPrefab = GetRandomObject(mPrefabList);
+            GameObject spawnedCoinOBJ = GameObject.Instantiate(RandomPrefab, mPrefabSpawnPoint.transform.position, Quaternion.identity);
+            spawnedCoinOBJ.transform.position = SpawnPOS;
+            mzOffset += 40;
+        }
     }
 }
