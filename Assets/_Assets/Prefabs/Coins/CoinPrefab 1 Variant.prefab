@@ -394,7 +394,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinPrefab 1 Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2884715566309327097, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3325424894107976443, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
     - {fileID: 3766834470767055329, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
@@ -411,9 +412,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8919924417309787204, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4549283637122789841}
-    - targetCorrespondingSourceObject: {fileID: 8919924417309787204, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -421661473186107724}
     - targetCorrespondingSourceObject: {fileID: 714024611177098116, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8480042772655267441}
@@ -473,18 +471,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-421661473186107724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936915590611525620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6549169877376659508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 714024611177098116, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}

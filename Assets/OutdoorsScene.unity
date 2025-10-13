@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b11a20a45933644a9b963d937884f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSectionMovespeed: 10
+  mSectionMovespeed: 20
   mSectionOffset: 100
   mSectionPrefab: {fileID: 8568339448248358143, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
   mSectionSpawn: {fileID: 952237198}
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mHeightOffset: 2.5
   mBackOffset: 10
-  mFollowLerpRate: 2
+  mFollowLerpRate: 10
 --- !u!1 &1834385851
 GameObject:
   m_ObjectHideFlags: 0

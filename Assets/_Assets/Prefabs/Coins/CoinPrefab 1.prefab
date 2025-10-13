@@ -865,7 +865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8219082916708880332}
   - component: {fileID: 1679462745724315012}
-  - component: {fileID: -1723345004415924941}
   m_Layer: 0
   m_Name: CoinPrefab 1
   m_TagString: Coin
@@ -938,15 +937,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-1723345004415924941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8919924417309787204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff3dbac9ec1e72f47ba567ba623f8dd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

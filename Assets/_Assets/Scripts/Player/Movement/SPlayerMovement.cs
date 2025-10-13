@@ -1,15 +1,17 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Scripting.APIUpdating;
+[RequireComponent(typeof(CharacterController))]
 public class SPlayerMovement : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] float mMaxMoveSpeed = 300;
-    [SerializeField] float mForwardSpeed = 300;
-    [SerializeField] float mMoveSpeedAcceleration = 10;
+    [Header("Distance Settings")]
     [SerializeField] float mDistance = 0;
+
+    [Header("Lane Control")]
+    [SerializeField] private int mLaneCount = 3; //number of lanes
+    [SerializeField] private float mLaneDistance = 2; //distance between lanes
+    [SerializeField] private int mCurrentLane;
+    [SerializeField] private float mLaneChangeSpeed = 10; //how fast the player goes between lanes
 
     [Header("Components")]
     private PlayerActions mPlayerActions;
@@ -18,6 +20,7 @@ public class SPlayerMovement : MonoBehaviour
 
     [Header("Vectors")]
     private Vector3 mHorizontalVelocity;
+    private Vector3 mTargetPOS;
     private Vector2 mMoveInput;
     void Awake()
     {
@@ -30,6 +33,8 @@ public class SPlayerMovement : MonoBehaviour
     }
     private void Start()
     {
+        mCurrentLane = mLaneCount / 2; //setting starting position to be the middle lane
+        mTargetPOS = transform.position;
         mDistanceText = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<TextMeshProUGUI>();
     }
     private void HandleInput(InputAction.CallbackContext context)
@@ -46,44 +51,73 @@ public class SPlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        Vector3 forwardMove = transform.forward * mForwardSpeed;
-        Vector3 FinalMov = forwardMove + mHorizontalVelocity;
-        mCharacterController.Move(FinalMov * Time.deltaTime);
+        Vector3 FinalMov = mHorizontalVelocity;
+        mCharacterController.Move(FinalMov);
         HorizontalMovement();
-
+        HandleLaneInput();
+        UpdatePlayerPOS();
         PlayerDistance();
     }
-    private void HorizontalMovement()
-    {
-        Vector3 moveDir = PlayerInputToWorldDir(mMoveInput);
-        transform.position += moveDir * mForwardSpeed * Time.deltaTime; //constantly moving the player forward
-        if(moveDir.sqrMagnitude > 0)
-        {
-            mHorizontalVelocity += moveDir * mMoveSpeedAcceleration * Time.deltaTime;
-            mHorizontalVelocity = Vector3.ClampMagnitude(mHorizontalVelocity, mMaxMoveSpeed);
-        }
-        else
-        {
-            if(mHorizontalVelocity.sqrMagnitude > 0)
-            {
-                mHorizontalVelocity -= mHorizontalVelocity.normalized * mMoveSpeedAcceleration * Time.deltaTime;
-                if(mHorizontalVelocity.sqrMagnitude < 0.1f)
-                {
-                    mHorizontalVelocity = Vector3.zero;
-                }
-            }
-        }
-    }
-    Vector3 PlayerInputToWorldDir(Vector2 inputval)
+    Vector3 PlayerInputToWorldDir(Vector2 inputval) //finds the cross for the camera to always be facing the player
     {
         Vector3 rightDir = Camera.main.transform.right;
         Vector3 fwdDir = Vector3.Cross(rightDir, Vector3.up);
 
         return rightDir * inputval.x + fwdDir * inputval.y;
     }
-    private void PlayerDistance()
+    #region LaneHandling
+    private void PlayerDistance() //handling the players distance 
     {
         mDistance += (1 * 3f) * Time.deltaTime;
         mDistanceText.text = "Distance : "+ mDistance.ToString("F2");
     }
+    private void HandleLaneInput()
+    {
+        if(mMoveInput.x > 0.5f) //changing to the right lane
+        {
+            ChangeLane(1);
+            
+            mMoveInput = Vector2.zero; //preventing the player from spamming the button
+        }
+        else if(mMoveInput.x < -0.5f) //changing to the left lane
+        {
+            ChangeLane(-1);
+            mMoveInput = Vector2.zero;//preventing the player from spamming the button
+        }
+    }
+    private void ChangeLane(int direction)
+    {
+        mCurrentLane = Mathf.Clamp(mCurrentLane + direction, 0 , mLaneCount - 1); //actually changing the index of the lanes and keeping the player within the 3 lanes
+    }
+    private void HorizontalMovement()
+    {
+        Vector3 moveDir = PlayerInputToWorldDir(mMoveInput); //updating for camera to follow the camera
+
+        Vector3 pos = transform.position;
+        float newX = Mathf.MoveTowards(pos.x, mTargetPOS.x, mLaneChangeSpeed * Time.deltaTime); //moving the player smoothly between lanes
+
+        float deltaX = newX - pos.x;
+        mHorizontalVelocity = new Vector3(deltaX, 0, 0);
+    }
+    private void UpdatePlayerPOS() //calculating the x postion for the current lane
+    {
+        float center = (mLaneCount - 1) * 0.5f; //finds center of index
+        float DesiredX = (mCurrentLane - center) * mLaneDistance; //calculates target x pos
+        mTargetPOS = new Vector3(DesiredX, transform.position.y, transform.position.z); //creates target pos vector
+    }
+    private void OnDrawGizmos() //for visual representation
+    {
+        if(!Application.isPlaying)
+        {
+            return;
+        }
+        float center = (mLaneCount - 1) * 0.5f;
+        for(int i = 0; i < mLaneCount; i++)
+        {
+            float x = (i - center) * mLaneDistance;
+            Gizmos.color = (i == mCurrentLane) ? Color.red : Color.green; //setting the color that the player is currently in to red
+            Gizmos.DrawWireCube(new Vector3(x, transform.position.y + 1, transform.position.z + 5), new Vector3(1,2,1));
+        }
+    }
+    #endregion
 }

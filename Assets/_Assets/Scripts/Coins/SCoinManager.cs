@@ -65,7 +65,7 @@ public class SCoinManager : MonoBehaviour
             GameObject RandomPrefab = GetRandomObject(mPrefabList);
             GameObject spawnedCoinOBJ = GameObject.Instantiate(RandomPrefab, mPrefabSpawnPoint.transform.position, Quaternion.identity);
             spawnedCoinOBJ.transform.position = SpawnPOS;
-            mzOffset += 40;
+            mzOffset += 30;
         }
     }
 }

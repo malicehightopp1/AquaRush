@@ -52,7 +52,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinPrefab 1 - Lane 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -421661473186107724, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+    - {fileID: 8864064084573281097, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+    - {fileID: 8480042772655267441, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+    - {fileID: 8438228304068777301, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+    - {fileID: 6432995080710358142, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
