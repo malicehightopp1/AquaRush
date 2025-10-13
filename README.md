@@ -1,4 +1,9 @@
 # AquaRush
+
+* Engine Confirguration
+|Engine|Version|
+|------|-------|
+|Unity|6000.1.2f1|
 AquaRush is a subway surfers clone/inspired game with the twist of instead of people as your character its boats in water! AquaRush, being a clone of subways surfers deals with alot of the same systems. Inluding the infinite generation of path and coins. Along with that a save system for coins and the players boat that they have selected! 
 
 Basic Gameplay - Game auto generates the paths with the player staying still and the paths moving so the game doesnt have to load a far transform. Auto generates coins and objects for the player to interact with along the path. Player has basic right and left controls
