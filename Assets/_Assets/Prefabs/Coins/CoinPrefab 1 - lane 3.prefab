@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5238272340222540326
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385753905876931708, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936915590611525620, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      propertyPath: m_Name
+      value: CoinPrefab 1 - lane 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2059760649772753424, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 384232891338014181}
+    - targetCorrespondingSourceObject: {fileID: 9200432094928846422, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3364114377550388080}
+  m_SourcePrefab: {fileID: 100100000, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+--- !u!1 &3971212584285226096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9200432094928846422, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+  m_PrefabInstance: {fileID: 5238272340222540326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &3364114377550388080
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3971212584285226096}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 6ca97c599c4986548823137abba857a1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6ca97c599c4986548823137abba857a1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!1 &6064001881896622134 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2059760649772753424, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+  m_PrefabInstance: {fileID: 5238272340222540326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &384232891338014181
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064001881896622134}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 6ca97c599c4986548823137abba857a1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 6ca97c599c4986548823137abba857a1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

@@ -1,0 +1,45 @@
+using TMPro;
+using UnityEngine;
+
+public class SPlayer : MonoBehaviour
+{
+    [SerializeField] private int mPlayerHits = 0;
+    [SerializeField] private int mPlayerMaxHits = 3;
+
+    [SerializeField] private SCameraRig mRig;
+
+    [SerializeField] private TextMeshProUGUI mPlayerHitsText;
+    private void Awake()
+    {
+        mRig = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SCameraRig>();
+        mPlayerHitsText = GameObject.FindGameObjectWithTag("HitText").GetComponent<TextMeshProUGUI>();
+        mRig.SetFollowTransform(transform);
+    }
+    void Start()
+    {
+        mPlayerHits = mPlayerMaxHits;
+        mPlayerHitsText.text = mPlayerHits.ToString();
+    }
+    private void PlayerHits(int hits)
+    {
+        mPlayerHits -= hits;
+        mPlayerHits = Mathf.Clamp(mPlayerHits, 0, mPlayerMaxHits);
+        mPlayerHitsText.text = mPlayerHits.ToString();
+        if(mPlayerHits <= 0)
+        {
+            PlayerLose();
+        }
+    }
+    void PlayerLose()
+    {
+        Time.timeScale = 0.0f;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("HitOBJ"))
+        {
+            PlayerHits(1);
+            Destroy(other.gameObject);
+        }
+    }
+}
