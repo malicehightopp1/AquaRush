@@ -1,24 +1,22 @@
 # AquaRush
 ## Table of Contents
-- [Overview](##Overview)
-- [Core Classes](##Core-classes)
-- [Features](##Features)
-- [Structure/Architecture](##Structure/Architecture)
-- [known issues/Bugs](##Known-Issues/Bugs)
-- [Future Plans](##Future-Plans)
-- [Credits](##Credits)
-## Overview
+- [Overview](#Overview)
+- [Core Classes](#Core-classes)
+- [Features](#Features)
+- [Structure/Architecture](#Structure-Architecture)
+- [known issues/Bugs](#Known-Issues-Bugs)
+- [Future Plans](#Future-Plans)
+- [Credits](#Credits)
+# overview
 
-## Features
+# features
 
-## Core classes
+# core classes
 
-## Features
+# structure/Architecture
 
-## Structure/Architecture
+# known Issues/Bugs
 
-## Known Issues/Bugs
+# future Plans
 
-## Future Plans
-
-## Credits
+# credits
