@@ -1,7 +1,7 @@
-# AquaRush
+# AquaRush ⛵
 
 ---
-# Table of Contents
+## Table of Contents
 - [Overview](#Overview)
 - [Core Classes](#Core-classes)
 - [Features](#Features)
