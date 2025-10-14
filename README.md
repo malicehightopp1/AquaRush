@@ -5,7 +5,7 @@
 - [Overview](#Overview)
 - [Core Classes](#Core-classes)
 - [Features](#Features)
-- [Structure/Architecture](#Structure-Architecture)
+- [Structure/Architecture](#structure-architecture)
 - [known issues/Bugs](#Known-Issues-Bugs)
 - [Future Plans](#Future-Plans)
 - [Credits](#Credits)
