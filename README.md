@@ -11,24 +11,24 @@
 - [Credits](#Credits)
 
 ---
-# overview
+## overview
 
 ---
-# features
+## features
 
 ---
-# core classes
+## core classes
 
 ---
-# structure-architecture
+## structure-architecture
 
 ---
-# known issues-Bugs
+## known issues-Bugs
 
 ---
-# future plans
+## future plans
 
 ---
-# credits
+## credits
 
 ---
