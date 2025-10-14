@@ -1,7 +1,7 @@
 # AquaRush ⛵
 Lets splash into this Game AquaRush!! Rushdown the waterway Avoiding objects, collecting coins, and reaching new distances further than ever before!
 ---
-## Table of Contents
+# Table of Contents
 - [Overview](#Overview)
 - [Core Classes](#Core-classes)
 - [Features](#Features)
@@ -10,10 +10,10 @@ Lets splash into this Game AquaRush!! Rushdown the waterway Avoiding objects, co
 - [Future Plans](#Future-Plans)
 - [Credits](#Credits)
 ---
-## overview
+# overview
 AquaRush is an endless runner game based on subway surfer, but the twist is its set in the ocean with boats with the player controlling a boat speeding through objects and collecting coins. The goal as most endless runners is to reach the farthest distance possible while collecting coins and avoiding all the hazards of the sea. 
 ---
-## features
+# features
 - ### Lane Based Movement System
     Similar 3 lane system as subway surfers
     - Uses Left/Right input to smoothly move between lanes
@@ -23,18 +23,18 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
     - keeps track of the number of coins the player collects
     - used to buy powerups or boats
 ---
-## core classes
+# core classes
 
 ---
-## structure-architecture
+# structure-architecture
 
 ---
-## known issues-Bugs
+# known issues-Bugs
 
 ---
-## future plans
+# future plans
 
 ---
-## credits
+# credits
 
 ---
