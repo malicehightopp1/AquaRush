@@ -1,5 +1,5 @@
 # AquaRush ⛵
-
+Lets splash into this Game AquaRush!! Rushdown the waterway Avoiding objects, collecting coins, and reaching new distances further than ever before!
 ---
 ## Table of Contents
 - [Overview](#Overview)
