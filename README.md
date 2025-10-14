@@ -17,7 +17,11 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
 - ### Lane Based Movement System
     Similar 3 lane system as subway surfers
     - Uses Left/Right input to smoothly move between lanes
-    - adjustable values for lane distance and transition time between lanes for added difficulty and flexablity 
+    - adjustable values for lane distance and transition time between lanes for added difficulty and flexablity
+- ### Coin collection system
+    Simple coin collection system 
+    - keeps track of the number of coins the player collects
+    - used to buy powerups or boats
 ---
 ## core classes
 
