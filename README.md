@@ -20,10 +20,10 @@
 # core classes
 
 ---
-# structure/architecture
+# structure-architecture
 
 ---
-# known issues/Bugs
+# known issues-Bugs
 
 ---
 # future plans
