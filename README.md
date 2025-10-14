@@ -13,10 +13,10 @@
 
 # core classes
 
-# structure/Architecture
+# structure/architecture
 
-# known Issues/Bugs
+# known issues/Bugs
 
-# future Plans
+# future plans
 
 # credits
