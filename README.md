@@ -1,9 +1,45 @@
-Basic Gameplay - Game auto generates the paths with the player staying still and the paths moving so the game doesnt have to load a far transform. Auto generates coins and objects for the player to interact with along the path. Player has basic right and left controls
-**will be changed to paths that the player can move through** - currently working on reworking player movement so its more stable and feels smoother. Along with this player can choose and save the boat 
-that there are using and currently have a complete game loop just needs polishing
+# AquaRush ⛵
+Lets splash into this Game AquaRush!! Rushdown the waterway Avoiding objects, collecting coins, and reaching new distances further than ever before!
+---
+# Table of Contents
+- [Overview](#Overview)
+- [Core Classes](#Core-classes)
+- [Features](#Features)
+- [Structure/Architecture](#structure-architecture)
+- [known issues/Bugs](#Known-Issues-Bugs)
+- [Future Plans](#Future-Plans)
+- [Credits](#Credits)
+---
+# overview
+AquaRush is an endless runner game based on subway surfer, but the twist is its set in the ocean with boats with the player controlling a boat speeding through objects and collecting coins. The goal as most endless runners is to reach the farthest distance possible while collecting coins and avoiding all the hazards of the sea. 
+---
+# features
+- ### Lane Based Movement System
+    Similar 3 lane system as subway surfers
+    - Uses Left/Right input to smoothly move between lanes
+    - adjustable values for lane distance and transition time between lanes for added difficulty and flexablity
+- ### Coin collection system
+    Simple coin collection system 
+    - keeps track of the number of coins the player collects
+    - used to buy powerups or boats
+- ### Boat selection system
+    Simple boat skin changing
+    - saves and keeps track of what boat the player is using
+    - some can be bought using the coins
+    - player starts with 3 basic boats
+---
+# core classes
 
-Core classes - SSectionSpawnManager - class that manages section spawning and moving. SCoinManager - Manages all coin actions along with spawning the coins along the path. The last important class is the SPlayer - manages the distance tracking, Player health **hitsToTake**
-, animations for player, and will either have it manage player saving or move that to its own script.
+---
+# structure-architecture
 
-still to implment - overall polishing of environment, Overhaul of playermovement focusing on smoothness and overall better feel to player movement, Coin shop implementation, the rest of the save system you can save your boat selection but not the score or highscore. 
-Win lose state needs to be implemented. 
+---
+# known issues-Bugs
+
+---
+# future plans
+
+---
+# credits
+
+---
