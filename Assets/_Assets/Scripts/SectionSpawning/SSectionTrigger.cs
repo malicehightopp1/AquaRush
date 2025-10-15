@@ -15,7 +15,6 @@ public class SSectionTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Trigger") && mCanBeTriggered == true)
         {
             mCanBeTriggered = false;
-            Debug.Log($"Hit {other.gameObject.name}");
             mCoinManager.CoinSpawnGetter();
             mSpawnManager.SpawnHandlingGetter();
             RestartBool();

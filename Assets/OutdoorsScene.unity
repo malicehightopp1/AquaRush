@@ -849,11 +849,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPrefabList:
-  - {fileID: 3617464180213194950, guid: 3344d26410022da41b348db4dd2dfb6a, type: 3}
-  - {fileID: 6949073860717389266, guid: 7c7d6e3cd101e8e45ae24cdfb858ec10, type: 3}
   - {fileID: 2936915590611525620, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
-  - {fileID: 8919924417309787204, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
-  mNumberOfCoinsSpawned: 5
+  mNumberOfCoinsSpawned: 3
   mPrefabSpawnPoint: {fileID: 1363526427}
 --- !u!114 &601703267
 MonoBehaviour:

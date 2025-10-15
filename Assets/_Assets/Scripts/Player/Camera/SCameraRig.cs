@@ -37,10 +37,10 @@ public class SCameraRig : MonoBehaviour
             Renderer objRender = obj.GetComponent<Renderer>();
             if (objRender != null && !GeometryUtility.TestPlanesAABB(planes, objRender.bounds)) //checking if objects are in bounds of camera view/frustum plane
             {
-                Destroy(obj, 2f);
+                Debug.Log($"Destroyed {obj.gameObject.name}");
+                Destroy(obj, 1f);
             }
         }
-
         GameObject[] HitOBJ = GameObject.FindGameObjectsWithTag("HitOBJ");
         Plane[] planes2 = GeometryUtility.CalculateFrustumPlanes(mCamera);
         foreach (GameObject hit in HitOBJ)
@@ -48,7 +48,7 @@ public class SCameraRig : MonoBehaviour
             Renderer obj1Render = hit.GetComponent<Renderer>();
             if (obj1Render != null && !GeometryUtility.TestPlanesAABB(planes2, obj1Render.bounds)) //checking if objects are in bounds of camera view/frustum plane
             {
-                Destroy(hit, 2f);
+                Destroy(hit, 1f);
             }
         }
     }
