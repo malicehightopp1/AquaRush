@@ -49,17 +49,16 @@ public class SCoinManager : MonoBehaviour
     {
         for (int i = 0; i < mNumberOfCoinsSpawned; i++)
         {
-            if(i >= 3)
-            {
-            }
-            mzOffset = 0;
+            mzOffset += 20;
             Vector3 SpawnPOS = new Vector3(mLanes[Random.Range(0, mLanes.Length)], 0f, mzOffset); //selects random lane and offsets a bit 
-            GameObject RandomPrefab = GetRandomObject(mPrefabList);
+            GameObject RandomPrefab = GetRandomObject(mPrefabList); //selecting a random coin pattern to spawn
+
             GameObject spawnedCoinOBJ = GameObject.Instantiate(RandomPrefab, mPrefabSpawnPoint.transform.position, Quaternion.identity);
             spawnedCoinOBJ.transform.position = SpawnPOS;
-            mzOffset += 40;
-            //the offset is offsetting but when it resets spawns back at 0 and cause the coins to double up 
-            //making lots of coins to spawn and get overcrowded
+            if(i == 0)
+            {
+                mzOffset = 0;
+            }
         }
     }
 }

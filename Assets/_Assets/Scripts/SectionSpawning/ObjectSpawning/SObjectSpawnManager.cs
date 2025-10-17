@@ -4,7 +4,11 @@ using Random = UnityEngine.Random;
 
 public class SObjectSpawnManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> mObjectPrefabs;
+    [SerializeField] private List<GameObject> mPrefabList;
+    [SerializeField] private int mNumberOfOBJSpawned = 0;
+    private float[] mLanes = { -2, 0, 2 };
+
+    [SerializeField] private Transform mPrefabSpawnPoint;
     private float mZOffset;
     void Start()
     {
@@ -12,16 +16,19 @@ public class SObjectSpawnManager : MonoBehaviour
     }
     private void ObjectSpawnManager()
     {
-        for(int i = 0; i < 5; i ++)
+        for (int i = 0; i < mNumberOfOBJSpawned; i++)
         {
-            Quaternion random = Quaternion.Euler(0f, Random.Range(179, -179), Random.Range(79, -79));
-            Vector3 ObjSpawnx = new Vector3(Random.Range(1.5f, -1.5f), 0.2f,mZOffset);
-            GameObject ObjSpawn = GetRandomOBJ(mObjectPrefabs);
-            GameObject SpawnedBadOBJ = Instantiate(ObjSpawn, ObjSpawnx, random);
-            Vector3 newObjPostion = SpawnedBadOBJ.transform.position;
-            newObjPostion.z = mZOffset;
-            newObjPostion.z = mZOffset;
-            mZOffset += 40;
+
+            Vector3 SpawnPOS = new Vector3(mLanes[Random.Range(0, mLanes.Length)], 0f, mZOffset); //selects random lane and offsets a bit 
+            GameObject RandomPrefab = GetRandomOBJ(mPrefabList); //selecting a random OBJ to spawn in lanes
+
+            GameObject spawnedCoinOBJ = GameObject.Instantiate(RandomPrefab, mPrefabSpawnPoint.transform.position, Quaternion.identity);
+            spawnedCoinOBJ.transform.position = SpawnPOS;
+        }
+        mZOffset += mNumberOfOBJSpawned * 2f;
+        if (mZOffset >= 50f)
+        {
+            mZOffset = 0;
         }
     }
     GameObject GetRandomOBJ(List<GameObject> objs)

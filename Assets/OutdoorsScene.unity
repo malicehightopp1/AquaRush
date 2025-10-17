@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPrefabList:
-  - {fileID: 2936915590611525620, guid: e8afefc381c3d574aa4e1fceb735fe34, type: 3}
+  - {fileID: 8791286150897021776, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
   mNumberOfCoinsSpawned: 3
   mPrefabSpawnPoint: {fileID: 1363526427}
 --- !u!114 &601703267
@@ -864,9 +864,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1917ac5e34534474aadaf506d2aa4100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mObjectPrefabs:
+  mPrefabList:
   - {fileID: 8620059715107889215, guid: beab5e59b1a06a34289751d88314aa55, type: 3}
   - {fileID: 6516402437650180413, guid: 034019230d27c184fad34df22398bae2, type: 3}
+  mNumberOfOBJSpawned: 5
+  mPrefabSpawnPoint: {fileID: 1363526427}
 --- !u!114 &601703268
 MonoBehaviour:
   m_ObjectHideFlags: 0

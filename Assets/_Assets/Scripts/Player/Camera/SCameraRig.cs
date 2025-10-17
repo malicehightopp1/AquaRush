@@ -38,7 +38,7 @@ public class SCameraRig : MonoBehaviour
             if (objRender != null && !GeometryUtility.TestPlanesAABB(planes, objRender.bounds)) //checking if objects are in bounds of camera view/frustum plane
             {
                 Debug.Log($"Destroyed {obj.gameObject.name}");
-                Destroy(obj, 1f);
+                Destroy(obj.gameObject, 1f);
             }
         }
         GameObject[] HitOBJ = GameObject.FindGameObjectsWithTag("HitOBJ");
