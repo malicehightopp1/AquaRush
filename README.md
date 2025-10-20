@@ -44,7 +44,7 @@ AquaRush
 ├── 🎮 Player
 
 │     ├── SPlayerMovement.cs
-│
+
 ├── 💰 Gameplay Systems
 
 │     ├── SCoinManager.cs
@@ -52,7 +52,7 @@ AquaRush
 │     ├── SPowerUpManager.cs
 
 │     ├── SBoatSelection.cs
-│
+
 ├── 🧠 Managers
 
 │     ├── SGameManager.cs
