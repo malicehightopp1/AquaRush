@@ -40,10 +40,9 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
 ---
 # structure-architecture
 AquaRush
-│
 ├── 🎮 Player
 
-│     ├── SPlayerMovement.cs
+     ├── SPlayerMovement.cs
 
 ├── 💰 Gameplay Systems
 
