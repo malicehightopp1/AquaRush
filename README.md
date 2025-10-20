@@ -41,22 +41,26 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
 # structure-architecture
 AquaRush
 │
-├── Player
-│ ├── 
-│ └── 
+├── Animations
+│ ├── storing all animations
 │
-├── Managers
-│ ├── 
-│ ├── 
-│ └── 
+├── Models
+│ ├── all assets for the game
 │
-├── Systems
-│ ├── 
-│ ├── 
-│ └── 
+├── Prefabs
+│ ├── all prefabs such as player, boats, and coins
 │
-└── Environment
-├── 
+└── Scripts
+│   ├── coins
+│       ├── [SCoinManager.cs](Assets/Scripts/SCoinManager.cs)
+│   ├── Player
+│       ├──
+│   ├── Saving
+│       ├──
+│   ├── Section spawning
+│       ├──
+│   ├── Mains
+│       ├──
 └── 
 ---
 # known issues-Bugs
