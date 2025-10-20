@@ -76,7 +76,6 @@ AquaRush
 
 │   ├── SShopMenu.cs
 
-└── SDataController.cs
 ---
 # known issues-Bugs
 - Occasional coin spawns slightly offset from lanes.  
