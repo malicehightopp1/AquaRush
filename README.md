@@ -43,39 +43,39 @@ AquaRush
 │
 ├── 🎮 Player
 
-│ ├── SPlayerMovement.cs
+│     ├── SPlayerMovement.cs
 │
 ├── 💰 Gameplay Systems
 
-│ ├── SCoinManager.cs
+│     ├── SCoinManager.cs
 
-│ ├── SPowerUpManager.cs
+│     ├── SPowerUpManager.cs
 
-│ ├── SBoatSelection.cs
+│     ├── SBoatSelection.cs
 │
 ├── 🧠 Managers
 
-│ ├── SGameManager.cs
+│     ├── SGameManager.cs
 
-│ ├── SPauseManager.cs
+│     ├── SPauseManager.cs
 
-│ └── SSaveManager.cs
+│     └── SSaveManager.cs
 
 │
 ├── 🌊 Environment
 
-│ ├── SObstacleManager.cs
+│     ├── SObstacleManager.cs
 
-│ └── SCoinSpawner.cs
+│     └── SCoinSpawner.cs
 
 │
 └── 🧩 UI & Data
 
-├── SUIManager.cs
+│   ├── SUIManager.cs
 
-├── SMainMenu.cs
+│   ├── SMainMenu.cs
 
-├── SShopMenu.cs
+│   ├── SShopMenu.cs
 
 └── SDataController.cs
 ---
