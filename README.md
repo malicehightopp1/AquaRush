@@ -42,9 +42,11 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
 AquaRush
 │
 ├── 🎮 Player
+
 │ ├── SPlayerMovement.cs
 │
 ├── 💰 Gameplay Systems
+
 │ ├── SCoinManager.cs
 
 │ ├── SPowerUpManager.cs
@@ -52,6 +54,7 @@ AquaRush
 │ ├── SBoatSelection.cs
 │
 ├── 🧠 Managers
+
 │ ├── SGameManager.cs
 
 │ ├── SPauseManager.cs
@@ -60,12 +63,14 @@ AquaRush
 
 │
 ├── 🌊 Environment
+
 │ ├── SObstacleManager.cs
 
 │ └── SCoinSpawner.cs
 
 │
 └── 🧩 UI & Data
+
 ├── SUIManager.cs
 
 ├── SMainMenu.cs
