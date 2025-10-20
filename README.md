@@ -64,7 +64,7 @@ AquaRush
 - Boat selection menu UI needs polishing on different resolutions.  
 ---
 # future plans
-For this project id like to push it out to itch.io and make an actual game of it. Id also liuke to push out versions for phone as well. Game wise id like to push for a complete shop system for the player to buy boats, collectables, and or powerups to use, I think this would be a good addition adding some flexiablity for the player in the game and visual appeal to the game. Id like to generally push for better graphics in the future i believe this would up the want to play the game in the players eyes.
+For this project id like to push it out to itch.io and make an actual game of it. Id also like to push out versions for phone as well. Game wise id like to push for a complete shop system for the player to buy boats, collectables, and or powerups to use, I think this would be a good addition adding some flexiablity for the player in the game and visual appeal to the game. Id like to generally push for better graphics in the future i believe this would up the want to play the game in the players eyes.
 
 ---
 # credits
