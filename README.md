@@ -29,17 +29,72 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
     - player starts with 3 basic boats
 ---
 # core classes
+| Class | Description |
+|-------|--------------|
+| **SPlayerMovement** | Handles player movement, lane switching, and collision detection. |
+| **SCoinManager** | Spawns and tracks coin objects and manages coin pickup logic. |
+| **SBoatSelection** | Manages available boats, saving, and player customization. |
+| **SPauseManager** | Controls the pause menu state and input handling. |
+| **SUIManager** | Handles in-game UI updates such as coin count, distance, and menus. |
 
 ---
 # structure-architecture
+AquaRush
+├── 🎮 Player
+
+│     └── SPlayerMovement.cs
+
+│
+
+├── 💰 Gameplay Systems
+
+│     ├── SCoinManager.cs
+
+│     ├── SPowerUpManager.cs
+
+│     └── SBoatSelection.cs
+
+│
+
+├── 🧠 Managers
+
+│     ├── SGameManager.cs
+
+│     ├── SPauseManager.cs
+
+│     └── SSaveManager.cs
+
+│
+
+├── 🌊 Environment
+
+│     ├── SObstacleManager.cs
+
+│     └── SCoinSpawner.cs
+
+│
+
+├── 🧩 UI & Data
+
+│   ├── SUIManager.cs
+
+│   ├── SMainMenu.cs
+
+└──  └── SShopMenu.cs
 
 ---
 # known issues-Bugs
-
+- Occasional coin spawns slightly offset from lanes.  
+- Boat selection menu UI needs polishing on different resolutions.  
 ---
 # future plans
+For this project id like to push it out to itch.io and make an actual game of it. Id also like to push out versions for phone as well. Game wise id like to push for a complete shop system for the player to buy boats, collectables, and or powerups to use, I think this would be a good addition adding some flexiablity for the player in the game and visual appeal to the game. Id like to generally push for better graphics in the future i believe this would up the want to play the game in the players eyes.
 
 ---
 # credits
+**Design & Development:** Brandin Stanfield  
+**Engine:** Unity  
+**Programming Language:** C#  
+**Inspiration:** Subway Surfers, Jetpack Joyride, Wave Rider
 
 ---
