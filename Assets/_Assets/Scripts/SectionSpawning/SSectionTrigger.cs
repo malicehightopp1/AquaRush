@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public class SSectionTrigger : MonoBehaviour
 {
@@ -12,16 +13,18 @@ public class SSectionTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Trigger") && mCanBeTriggered == true)
+        if(mCanBeTriggered == true && other.gameObject.CompareTag("Trigger"))
         {
             mCanBeTriggered = false;
             mCoinManager.CoinSpawnGetter();
             mSpawnManager.SpawnHandlingGetter();
-            RestartBool();
+
+            StartCoroutine(RestartBool());
         }
     }
-    private void RestartBool()
+    private IEnumerator RestartBool()
     {
+        yield return new WaitForSeconds(1f);
         mCanBeTriggered = true;
     }
 }
