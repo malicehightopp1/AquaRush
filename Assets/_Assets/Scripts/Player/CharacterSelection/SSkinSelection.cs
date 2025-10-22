@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 public class SSkinSelection : MonoBehaviour
 {
     [SerializeField] private GameObject[] mCharacters;
+    private GameObject mCurrentSelectedSkin;
     [SerializeField] private int mSelectedCharacter = 0;
-
+    public void Start()
+    {
+        mSelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", mSelectedCharacter);
+        mCharacters[mSelectedCharacter].SetActive(true);
+    }
     public void NextCharacter()
     {
         mCharacters[mSelectedCharacter].SetActive(false);
@@ -22,8 +27,10 @@ public class SSkinSelection : MonoBehaviour
         }
         mCharacters[mSelectedCharacter].SetActive(true);
     }
-    public void StartGame()
+    public void SavePlayerSkin()
     {
+        mCurrentSelectedSkin = mCharacters[mSelectedCharacter];
+        Debug.Log($"Selected skin : {mCurrentSelectedSkin.gameObject.name}");
         PlayerPrefs.SetInt("SelectedCharacter", mSelectedCharacter);
     }
 }

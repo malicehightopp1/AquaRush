@@ -86,9 +86,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mPlayerHits: 0
-  mPlayerMaxHits: 10000
+  mPlayerMaxHits: 3
   mRig: {fileID: 0}
   mPlayerHitsText: {fileID: 0}
+  mCoinManager: {fileID: 0}
 --- !u!114 &6777013587183848949
 MonoBehaviour:
   m_ObjectHideFlags: 0

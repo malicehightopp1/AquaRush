@@ -4,12 +4,14 @@ public class SSectionTrigger : MonoBehaviour
 {
     SSpawningManager mSpawnManager;
     SCoinManager mCoinManager;
+    SObjectSpawnManager mObjectSpawnManager;
     [SerializeField] private bool mCanBeTriggered = true;
     private void Start()
     {
         mCanBeTriggered = true;
         mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>(); 
         mSpawnManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SSpawningManager>();
+        mObjectSpawnManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SObjectSpawnManager>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -17,8 +19,8 @@ public class SSectionTrigger : MonoBehaviour
         {
             mCanBeTriggered = false;
             mCoinManager.CoinSpawnGetter();
+            mObjectSpawnManager.GetObjSpawner();
             mSpawnManager.SpawnHandlingGetter();
-
             StartCoroutine(RestartBool());
         }
     }

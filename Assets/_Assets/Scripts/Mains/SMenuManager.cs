@@ -8,11 +8,14 @@ public class SMenuManager : MonoBehaviour
     [SerializeField] Button mStartButton, mQuitButton, mMainMenuButton;
 
     [SerializeField] SSkinSelection mSkinSelection;
+    private SCoinManager mCoinManager;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+
+        mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
 
         mStartButton?.onClick.AddListener(StartOnClick);
         mQuitButton?.onClick.AddListener(QuitOnClick);
@@ -20,7 +23,6 @@ public class SMenuManager : MonoBehaviour
     }
     private void StartOnClick()
     {
-        mSkinSelection.StartGame();
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1.0f;
         Cursor.visible = false;
@@ -35,9 +37,11 @@ public class SMenuManager : MonoBehaviour
     }
     private void MainMenuOnClick()
     {
+        mCoinManager.SaveCoins();
         Debug.Log("MainMenu");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         SceneManager.LoadScene(0);
+        mCoinManager.LoadCoins();
     }
 }

@@ -4,7 +4,6 @@ public class SLoadCharacter : MonoBehaviour
 {
     [SerializeField] GameObject[] mCharacterPrefabs;
     [SerializeField] Transform mSpawnPoint;
-
     private void Start()
     {
         int mSelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter");

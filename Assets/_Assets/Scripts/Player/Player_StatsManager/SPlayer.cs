@@ -9,10 +9,14 @@ public class SPlayer : MonoBehaviour
     [SerializeField] private SCameraRig mRig;
 
     [SerializeField] private TextMeshProUGUI mPlayerHitsText;
+
+    [Header("References")]
+    [SerializeField] private SCoinManager mCoinManager;
     private void Awake()
     {
         mRig = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SCameraRig>();
         mPlayerHitsText = GameObject.FindGameObjectWithTag("HitText").GetComponent<TextMeshProUGUI>();
+        mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
         mRig.SetFollowTransform(transform);
     }
     void Start()
@@ -32,6 +36,7 @@ public class SPlayer : MonoBehaviour
     }
     void PlayerLose()
     {
+        mCoinManager.SaveCoins();
         Time.timeScale = 0.0f;
     }
     private void OnTriggerEnter(Collider other)
