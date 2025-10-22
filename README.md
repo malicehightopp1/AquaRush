@@ -83,7 +83,6 @@ AquaRush
 └──  └── SShopMenu.cs
 
 ---
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.svgrepo.com%2F&psig=AOvVaw2P-u1OGohEIRQNZK-BdJ8N&ust=1761159267390000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCLCe99f7tZADFQAAAAAdAAAAABAE)
 # known issues-Bugs
 - Occasional coin spawns slightly offset from lanes.  
 - Boat selection menu UI needs polishing on different resolutions.  
