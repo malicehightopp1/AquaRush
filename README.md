@@ -28,6 +28,7 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
     - saves and keeps track of what boat the player is using
     - some can be bought using the coins
     - player starts with 3 basic boats
+  ![main menu](Assets/_Assets/Images/MainMenu.png)
 ---
 # core classes
 | Class | Description |
