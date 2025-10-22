@@ -36,7 +36,7 @@ public class SCoinManager : MonoBehaviour
         mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000);
         mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
     }
-    GameObject GetRandomObject(List<GameObject> list) //picking a random pattern of coins
+    private GameObject GetRandomObject(List<GameObject> list) //picking a random pattern of coins
     {
         int index = Random.Range(0, list.Count);
         return list[index];

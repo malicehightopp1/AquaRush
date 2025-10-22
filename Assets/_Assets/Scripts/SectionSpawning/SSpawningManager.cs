@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 public class SSpawningManager : MonoBehaviour
 {
     [SerializeField] private float mSectionMovespeed = 5;
     [SerializeField] private float mSectionOffset = 100;
-    [SerializeField] private GameObject mSectionPrefab;
+    [SerializeField] private List<GameObject> mSectionPrefabs;
     [SerializeField] private Transform mSectionSpawn;
 
     public float MoveSpeed
@@ -13,11 +14,17 @@ public class SSpawningManager : MonoBehaviour
     }
     private void SpawnHandling()
     {
-        GameObject Child = mSectionPrefab;
+        GameObject Child = GetRandomObject(mSectionPrefabs);
         Instantiate(Child, new Vector3(0, 0 , mSectionOffset), Quaternion.identity);
+        Debug.Log($"Spawned : {Child.gameObject.name}");
     }
     public void SpawnHandlingGetter()
     {
         SpawnHandling();
+    }
+    private GameObject GetRandomObject(List<GameObject> list) //picking a random gameobject
+    {
+        int index = Random.Range(0, list.Count);
+        return list[index];
     }
 }

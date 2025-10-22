@@ -912,7 +912,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mSectionMovespeed: 20
   mSectionOffset: 100
-  mSectionPrefab: {fileID: 8568339448248358143, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
+  mSectionPrefabs:
+  - {fileID: 8568339448248358143, guid: f200a3bb410756a498bea25dbfd900b4, type: 3}
+  - {fileID: 7178906100001072565, guid: 2a7363a2edb850b4a9fbed941cc14cc4, type: 3}
+  - {fileID: 3649582036628165474, guid: b6c3b84918f069141898407b31ef5174, type: 3}
   mSectionSpawn: {fileID: 952237198}
 --- !u!1 &612200387
 GameObject:
