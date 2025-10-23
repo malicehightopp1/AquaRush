@@ -45,6 +45,7 @@ public class SMenuManager : MonoBehaviour
         Cursor.visible = true;
         SceneManager.LoadScene(0);
         mCoinManager.LoadCoins();
+<<<<<<< HEAD
     }
     private void PlayAgain()
     {
@@ -53,5 +54,7 @@ public class SMenuManager : MonoBehaviour
         Time.timeScale = 1.0f;
         Cursor.visible = false;
         SceneManager.LoadScene(1);
+=======
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
     }
 }

@@ -10,6 +10,7 @@ public class SPlayer : MonoBehaviour
     [SerializeField] private SCameraRig mRig;
 
     [SerializeField] private TextMeshProUGUI mPlayerHitsText;
+<<<<<<< HEAD
     [SerializeField] private GameObject mPlayerLoseScreen;
     [Header("References")]
     [SerializeField] private SCoinManager mCoinManager;
@@ -18,6 +19,11 @@ public class SPlayer : MonoBehaviour
         get => mIsPlayerIsDead;
         private set => mIsPlayerIsDead = value;
     }
+=======
+
+    [Header("References")]
+    [SerializeField] private SCoinManager mCoinManager;
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
     private void Awake()
     {
         mRig = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SCameraRig>();
@@ -48,8 +54,11 @@ public class SPlayer : MonoBehaviour
     void PlayerLose()
     {
         mCoinManager.SaveCoins();
+<<<<<<< HEAD
         IsPlayerDead = true;
         mPlayerLoseScreen.SetActive(true);
+=======
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
         Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
