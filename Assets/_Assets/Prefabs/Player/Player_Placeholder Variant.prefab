@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: boat-fan
       objectReference: {fileID: 0}
+    - target: {fileID: 9033923058477419291, guid: bc02ac673cb738f48a620b95d039b180, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d316658ef4e4e44f9b05287b2476204, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

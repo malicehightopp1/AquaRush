@@ -8,18 +8,18 @@ public class SPauseManager : MonoBehaviour
 
     [Header("Components")]
     private PlayerActions mPlayerActions;
+    [Header("References")]
+    [SerializeField] private SPlayer mPlayer;
 
     private void Awake()
     {
         mPlayerActions = new PlayerActions();
-
         mPlayerActions.Gameplay.Pause.performed += GamePaused;
     }
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;    
-        mPauseMenu.SetActive(false);
+        Cursor.visible = false;
     }
     private void OnEnable()
     {
@@ -31,12 +31,19 @@ public class SPauseManager : MonoBehaviour
     }
     private void GamePaused(InputAction.CallbackContext context)
     {
-        bool mIsPaused = !mPauseMenu.activeSelf;
-        mPauseMenu.SetActive(mIsPaused);
+        if(mPlayer.IsPlayerDead == false)
+        {
+            bool mIsPaused = !mPauseMenu.activeSelf;
+            mPauseMenu.SetActive(mIsPaused);
 
-        Time.timeScale  = mIsPaused ? 0f : 1f;
-        Cursor.lockState = mIsPaused ? CursorLockMode.Confined : CursorLockMode.Locked;
-        Cursor.visible = mIsPaused ? true : false;
-        Debug.Log("Game paused");
+            Time.timeScale  = mIsPaused ? 0f : 1f;
+            Cursor.lockState = mIsPaused ? CursorLockMode.Confined : CursorLockMode.Locked;
+            Cursor.visible = mIsPaused ? true : false;
+            Debug.Log("Game paused");
+        }
+    }
+    internal void SetPlayer(SPlayer sPlayer)
+    {
+        mPlayer = sPlayer;
     }
 }

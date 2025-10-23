@@ -3,10 +3,9 @@ using UnityEngine;
 public class SSpawningManager : MonoBehaviour
 {
     [SerializeField] private float mSectionMovespeed = 5;
-    [SerializeField] private float mSectionOffset = 100;
+    [SerializeField] private float mSectionOffset = 1000;
     [SerializeField] private List<GameObject> mSectionPrefabs;
     [SerializeField] private Transform mSectionSpawn;
-
     public float MoveSpeed
     {
         get { return mSectionMovespeed; }

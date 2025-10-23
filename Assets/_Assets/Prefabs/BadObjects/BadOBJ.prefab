@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: HitOBJ
       objectReference: {fileID: 0}
+    - target: {fileID: 2044645210779359661, guid: 22124293aeccaf444b160101c3230cab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c1e6b081db73ff4488665a89ae050a0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

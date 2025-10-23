@@ -160,7 +160,9 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
+    - _Curve: 0.012
     - _Cutoff: 0.5
+    - _Depth: 0.006
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
