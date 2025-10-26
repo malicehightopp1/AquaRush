@@ -7,14 +7,11 @@ public class SSpawningManager : MonoBehaviour
     [SerializeField] private float mSectionOffset = 1000;
     [SerializeField] private List<GameObject> mSectionPrefabs;
     [SerializeField] private Transform mSectionSpawn;
-<<<<<<< HEAD
 
     [Header("Decor spawning")]
     [SerializeField] private List<GameObject> mDecorPrefabs;
     [SerializeField] private Transform mDecorSpawn;
     [SerializeField] private float mDecorOffset = 100;
-=======
->>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
     public float MoveSpeed
     {
         get { return mSectionMovespeed; }

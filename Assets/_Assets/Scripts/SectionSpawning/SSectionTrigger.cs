@@ -21,10 +21,9 @@ public class SSectionTrigger : MonoBehaviour
             mCoinManager.CoinSpawnGetter();
             mObjectSpawnManager.GetObjSpawner();
             mSpawnManager.SpawnHandlingGetter();
-<<<<<<< HEAD
+
             mSpawnManager.SpawnDecorManagerGetter();
-=======
->>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
+
             StartCoroutine(RestartBool());
         }
     }
