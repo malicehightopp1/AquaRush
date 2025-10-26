@@ -64,11 +64,19 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5867621867836553369, guid: 6428b2d92fbf1924c90af14a8d7ddba9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ab001fcc8b0f344ba0770166cf8cc25, type: 2}
     - target: {fileID: 919132149155446097, guid: 6428b2d92fbf1924c90af14a8d7ddba9, type: 3}
       propertyPath: m_Name
       value: CoinPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6428b2d92fbf1924c90af14a8d7ddba9, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2135667320269940063, guid: 6428b2d92fbf1924c90af14a8d7ddba9, type: 3}
       propertyPath: m_TagString
       value: Coin
       objectReference: {fileID: 0}
@@ -138,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 8ab001fcc8b0f344ba0770166cf8cc25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

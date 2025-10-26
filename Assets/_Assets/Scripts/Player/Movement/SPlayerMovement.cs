@@ -4,9 +4,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class SPlayerMovement : MonoBehaviour
 {
-    [Header("Distance Settings")]
-    [SerializeField] float mDistance = 0;
-
     [Header("Lane Control")]
     [SerializeField] private int mLaneCount = 3; //number of lanes
     [SerializeField] private float mLaneDistance = 2; //distance between lanes
@@ -16,7 +13,6 @@ public class SPlayerMovement : MonoBehaviour
     [Header("Components")]
     private PlayerActions mPlayerActions;
     private CharacterController mCharacterController;
-    [SerializeField] private TextMeshProUGUI mDistanceText;
 
     [Header("Vectors")]
     private Vector3 mHorizontalVelocity;
@@ -35,7 +31,6 @@ public class SPlayerMovement : MonoBehaviour
     {
         mCurrentLane = mLaneCount / 2; //setting starting position to be the middle lane
         mTargetPOS = transform.position;
-        mDistanceText = GameObject.FindGameObjectWithTag("DistanceText").GetComponent<TextMeshProUGUI>();
     }
     private void HandleInput(InputAction.CallbackContext context)
     {
@@ -56,7 +51,6 @@ public class SPlayerMovement : MonoBehaviour
         HorizontalMovement();
         HandleLaneInput();
         UpdatePlayerPOS();
-        PlayerDistance();
     }
     Vector3 PlayerInputToWorldDir(Vector2 inputval) //finds the cross for the camera to always be facing the player
     {
@@ -66,11 +60,6 @@ public class SPlayerMovement : MonoBehaviour
         return rightDir * inputval.x + fwdDir * inputval.y;
     }
     #region LaneHandling
-    private void PlayerDistance() //handling the players distance 
-    {
-        mDistance += (1 * 3f) * Time.deltaTime;
-        mDistanceText.text = "Distance : "+ mDistance.ToString("F2");
-    }
     private void HandleLaneInput()
     {
         if(mMoveInput.x > 0.5f) //changing to the right lane

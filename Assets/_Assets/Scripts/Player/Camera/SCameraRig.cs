@@ -37,7 +37,6 @@ public class SCameraRig : MonoBehaviour
             Renderer objRender = obj.GetComponent<Renderer>();
             if (objRender != null && !GeometryUtility.TestPlanesAABB(planes, objRender.bounds)) //checking if objects are in bounds of camera view/frustum plane
             {
-                Debug.Log($"Destroyed {obj.gameObject.name}");
                 Destroy(obj.gameObject, 1f);
             }
         }

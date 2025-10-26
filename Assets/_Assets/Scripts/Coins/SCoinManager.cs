@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class SCoinManager : MonoBehaviour
 {
     [Header("Coin management")]
-    private int mCurrentCoins = 0;
+    [SerializeField] private int mCurrentCoins = 0;
+    [SerializeField] private int mCoinsCollectedThisRun = 0;
     private TextMeshProUGUI mCurrentCoinsText;
 
     [Header("Coin Spawning")]
@@ -13,7 +15,7 @@ public class SCoinManager : MonoBehaviour
     private float[] mLanes = { -2, 0, 2 };
 
     [SerializeField] private Transform mPrefabSpawnPoint;
-    private float mzOffset = 0;
+    private float mzOffset = -75;
     public int CurrentCoins //getter and setter for coins manager
     {
         get { return mCurrentCoins; }
@@ -23,19 +25,24 @@ public class SCoinManager : MonoBehaviour
             CoinsManager(delta);
         }
     }
-    void Start()
+    private void Start()
     {
-        mCurrentCoinsText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<TextMeshProUGUI>();         
-        mCurrentCoins = 0;
-        mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
+        mCurrentCoinsText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<TextMeshProUGUI>();  
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            LoadCoins();
+        }
+        mCurrentCoinsText.text = $"Coins : {mCurrentCoins.ToString()}";
         CoinSpawningManager();
     }
     private void CoinsManager(int CoinsToAdd)
     {
+        mCoinsCollectedThisRun += CoinsToAdd;
         mCurrentCoins += CoinsToAdd;
         mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000);
-        mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
+        UpdateCoinUI();
     }
+    #region Coin spawning
     private GameObject GetRandomObject(List<GameObject> list) //picking a random pattern of coins
     {
         int index = Random.Range(0, list.Count);
@@ -49,7 +56,7 @@ public class SCoinManager : MonoBehaviour
     {
         for (int i = 0; i < mNumberOfCoinsSpawned; i++)
         {
-            mzOffset += 20;
+            mzOffset += 50;
             Vector3 SpawnPOS = new Vector3(mLanes[Random.Range(0, mLanes.Length)], 0f, mzOffset); //selects random lane and offsets a bit 
             GameObject RandomPrefab = GetRandomObject(mPrefabList); //selecting a random coin pattern to spawn
 
@@ -57,8 +64,43 @@ public class SCoinManager : MonoBehaviour
             spawnedCoinOBJ.transform.position = SpawnPOS;
             if(i == 0)
             {
-                mzOffset = 0;
+                mzOffset = -75;
             }
         }
     }
+    #endregion
+    #region Coin Saving
+    public void SaveCoins()
+    {
+        int totalcoins = PlayerPrefs.GetInt("SaveCoins", 0);
+        totalcoins += mCoinsCollectedThisRun;
+
+        PlayerPrefs.SetInt("SaveCoins", totalcoins);
+
+        mCurrentCoins = totalcoins;
+        mCoinsCollectedThisRun = 0;
+        PlayerPrefs.Save();
+    }
+    public void LoadCoins()
+    {
+        mCurrentCoins = PlayerPrefs.GetInt("SaveCoins", 0);
+        mCoinsCollectedThisRun = 0;
+
+        UpdateCoinUI();
+        //ResetCoins(); **testing**
+        Debug.Log($"Loading {mCurrentCoins}");
+    }
+    private void UpdateCoinUI()
+    {
+        mCurrentCoinsText.text = $"Coins : {mCurrentCoins.ToString()}";
+    }
+    public void ResetCoins() //for testing reseting the coins back to 0
+    {
+        PlayerPrefs.SetInt("SaveCoins", 0); 
+        PlayerPrefs.Save();                 
+        mCurrentCoins = 0;                  
+        UpdateCoinUI();                     
+        Debug.Log("Coins reset to 0");
+    }
+    #endregion
 }

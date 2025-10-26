@@ -11,6 +11,8 @@ TagManager:
   - HitOBJ
   - HitText
   - DistanceText
+  - PlayerLost
+  - MaxDistanceText
   layers:
   - Default
   - TransparentFX

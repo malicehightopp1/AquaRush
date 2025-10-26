@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7385773107824023246, guid: dac349cd45f81fe478883405af7d8f7c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5a98c14eb4f0f349940773bf4ac5edf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -201,6 +205,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7385773107824023246, guid: dac349cd45f81fe478883405af7d8f7c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5a98c14eb4f0f349940773bf4ac5edf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -271,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gate
       objectReference: {fileID: 0}
+    - target: {fileID: 7385773107824023246, guid: dac349cd45f81fe478883405af7d8f7c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b5a98c14eb4f0f349940773bf4ac5edf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
