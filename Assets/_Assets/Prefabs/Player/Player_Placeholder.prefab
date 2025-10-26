@@ -89,7 +89,14 @@ MonoBehaviour:
   mPlayerMaxHits: 3
   mRig: {fileID: 0}
   mPlayerHitsText: {fileID: 0}
+<<<<<<< HEAD
   mPlayerLoseScreen: {fileID: 0}
+=======
+<<<<<<< HEAD
+  mPlayerLoseScreen: {fileID: 0}
+=======
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
   mCoinManager: {fileID: 0}
 --- !u!114 &6777013587183848949
 MonoBehaviour:

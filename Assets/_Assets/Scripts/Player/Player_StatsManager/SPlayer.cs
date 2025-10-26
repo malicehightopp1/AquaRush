@@ -10,16 +10,31 @@ public class SPlayer : MonoBehaviour
     [SerializeField] private SCameraRig mRig;
 
     [SerializeField] private TextMeshProUGUI mPlayerHitsText;
+<<<<<<< HEAD
     [SerializeField] private GameObject mPlayerLoseScreen;
 
     [Header("References")]
     [SerializeField] private SCoinManager mCoinManager;
     private SDistanceManager mDistanceManager;
+=======
+<<<<<<< HEAD
+    [SerializeField] private GameObject mPlayerLoseScreen;
+    [Header("References")]
+    [SerializeField] private SCoinManager mCoinManager;
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
     public bool IsPlayerDead
     {
         get => mIsPlayerIsDead;
         private set => mIsPlayerIsDead = value;
     }
+<<<<<<< HEAD
+=======
+=======
+
+    [Header("References")]
+    [SerializeField] private SCoinManager mCoinManager;
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
     private void Awake()
     {
         mDistanceManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SDistanceManager>();
@@ -50,10 +65,19 @@ public class SPlayer : MonoBehaviour
     }
     void PlayerLose()
     {
+<<<<<<< HEAD
         mDistanceManager.SaveDistance();
         mCoinManager.SaveCoins();
         IsPlayerDead = true;
         mPlayerLoseScreen.SetActive(true);
+=======
+        mCoinManager.SaveCoins();
+<<<<<<< HEAD
+        IsPlayerDead = true;
+        mPlayerLoseScreen.SetActive(true);
+=======
+>>>>>>> 62b0d270a1dad68aa1ab653d35e6fe36ac6a0234
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
         Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;

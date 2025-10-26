@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene.unity
 --- !u!1001 &55394024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,6 +198,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4538438218131234, guid: f31c6bb6e68212e41b0bcae74612a240, type: 3}
   m_PrefabInstance: {fileID: 55394024}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a:Assets/OutdoorsScene.unity
 --- !u!1 &103483968
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +825,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -281.60004}
+<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene.unity
   m_LocalScale: {x: 160, y: 67.590004, z: 4}
+=======
+  m_LocalScale: {x: 40, y: 30, z: 4}
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a:Assets/OutdoorsScene.unity
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1085,7 +1092,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mCurrentCoins: 0
+<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene.unity
   mCoinsCollectedThisRun: 0
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a:Assets/OutdoorsScene.unity
   mPrefabList:
   - {fileID: 8791286150897021776, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
   mNumberOfCoinsSpawned: 3
@@ -1963,6 +1973,7 @@ Transform:
   - {fileID: 588960888}
   - {fileID: 1713805026}
   - {fileID: 1934695770}
+<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene.unity
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973107377
@@ -2026,6 +2037,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 55394025}
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a:Assets/OutdoorsScene.unity
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043040539

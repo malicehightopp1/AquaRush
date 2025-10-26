@@ -12,7 +12,10 @@ TagManager:
   - HitText
   - DistanceText
   - PlayerLost
+<<<<<<< HEAD
   - MaxDistanceText
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
   layers:
   - Default
   - TransparentFX

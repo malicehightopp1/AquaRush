@@ -6,14 +6,20 @@ public class SSkinSelection : MonoBehaviour
     [SerializeField] private GameObject[] mCharacters;
     private GameObject mCurrentSelectedSkin;
     [SerializeField] private int mSelectedCharacter = 0;
+<<<<<<< HEAD
 
     private Animation mIdleAnimation;
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
     public void Start()
     {
         mSelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", mSelectedCharacter);
         mCharacters[mSelectedCharacter].SetActive(true);
+<<<<<<< HEAD
         mIdleAnimation = mCharacters[mSelectedCharacter].GetComponent<Animation>();
         UpdateAnimations();
+=======
+>>>>>>> b34aba7ec8f3571ac5d389ddadbc2c699825478a
     }
     public void NextCharacter()
     {
