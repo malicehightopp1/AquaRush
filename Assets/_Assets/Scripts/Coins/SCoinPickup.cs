@@ -4,8 +4,10 @@ public class SCoinPickup : MonoBehaviour
     SCoinManager mCoinManager;
     private float mRotationSpeed = 100f;
     private Transform mTransform;
+    private bool mDestroyedcollidingobj = false;
     private void Start()
     {
+        mDestroyedcollidingobj = false;
         mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
     }
     private void Update()
@@ -15,7 +17,7 @@ public class SCoinPickup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player")) //actually detecting coins
         {
             int coins = mCoinManager.CurrentCoins; 
             mCoinManager.CurrentCoins += 1; 

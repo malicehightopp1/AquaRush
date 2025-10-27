@@ -9,9 +9,12 @@ public class SObjectSpawnManager : MonoBehaviour
     private float[] mLanes = { -2, 0, 2 };
 
     [SerializeField] private Transform mPrefabSpawnPoint;
+
+    private bool mDestroyedcollidingcoin = false;
     private float mZOffset = -75;
     void Start()
     {
+        mDestroyedcollidingcoin = false;
         ObjectSpawnManager();
     }
     private void ObjectSpawnManager()

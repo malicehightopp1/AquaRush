@@ -14,7 +14,7 @@ public class SDistanceManager : MonoBehaviour
     {
         mDistanceText = GameObject.FindGameObjectWithTag("DistanceText")?.GetComponent<TextMeshProUGUI>();
         mMaxDistanceText = GameObject.FindGameObjectWithTag("MaxDistanceText")?.GetComponent<TextMeshProUGUI>();
-        if(SceneManager.GetActiveScene().name == "MainMenu")
+        if(SceneManager.GetActiveScene().name == "MainMenu_Scene")
         {
             LoadDistance();
         }

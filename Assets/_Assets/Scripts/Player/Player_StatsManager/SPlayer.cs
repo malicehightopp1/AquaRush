@@ -3,21 +3,17 @@ using UnityEngine;
 
 public class SPlayer : MonoBehaviour
 {
-    private bool mIsPlayerIsDead = false;
+    [Header("Player hits")]
     [SerializeField] private int mPlayerHits = 0;
     [SerializeField] private int mPlayerMaxHits = 3;
-
-    [SerializeField] private SCameraRig mRig;
-
-    [SerializeField] private TextMeshProUGUI mPlayerHitsText;
-
+    private bool mIsPlayerIsDead = false;
+    private TextMeshProUGUI mPlayerHitsText;
+    private GameObject mPlayerLoseScreen;
 
     [Header("References")]
+    private SCameraRig mRig;
     private SDistanceManager mDistanceManager;
-
-    [SerializeField] private GameObject mPlayerLoseScreen;
-    [Header("References")]
-    [SerializeField] private SCoinManager mCoinManager;
+    private SCoinManager mCoinManager;
     public bool IsPlayerDead
     {
         get => mIsPlayerIsDead;
@@ -28,12 +24,12 @@ public class SPlayer : MonoBehaviour
     {
         mDistanceManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SDistanceManager>();
         mRig = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SCameraRig>();
-        mPlayerHitsText = GameObject.FindGameObjectWithTag("HitText").GetComponent<TextMeshProUGUI>();
         mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
         mRig.SetFollowTransform(transform);
     }
     void Start()
     {
+        mPlayerHitsText = GameObject.FindGameObjectWithTag("HitText").GetComponent<TextMeshProUGUI>();
         mPlayerLoseScreen = GameObject.FindGameObjectWithTag("PlayerLost");
         mPlayerLoseScreen.SetActive(false);
         mIsPlayerIsDead = false;

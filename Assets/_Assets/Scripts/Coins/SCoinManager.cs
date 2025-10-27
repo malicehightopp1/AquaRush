@@ -92,9 +92,7 @@ public class SCoinManager : MonoBehaviour
         mCurrentCoins = totalcoins;
         mCoinsCollectedThisRun = 0;
         PlayerPrefs.Save();
-        Debug.Log($"Saving {totalcoins}");
 
-        Debug.Log($"saved players coins : {mCurrentCoins} coins saved");
         PlayerPrefs.SetInt("SaveCoins", mCurrentCoins);
         PlayerPrefs.Save();
     }
