@@ -14,6 +14,10 @@ public class SPlayer : MonoBehaviour
     private SCameraRig mRig;
     private SDistanceManager mDistanceManager;
     private SCoinManager mCoinManager;
+<<<<<<< HEAD
+=======
+    private GameObject mPlayerLose;
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
     public bool IsPlayerDead
     {
         get => mIsPlayerIsDead;
@@ -31,6 +35,9 @@ public class SPlayer : MonoBehaviour
     {
         mPlayerHitsText = GameObject.FindGameObjectWithTag("HitText").GetComponent<TextMeshProUGUI>();
         mPlayerLoseScreen = GameObject.FindGameObjectWithTag("PlayerLost");
+        mPlayerLose = GameObject.FindGameObjectWithTag("LostText");
+        mPlayerLose.SetActive(false);
+
         mPlayerLoseScreen.SetActive(false);
         mIsPlayerIsDead = false;
         mPlayerHits = mPlayerMaxHits;
@@ -50,7 +57,6 @@ public class SPlayer : MonoBehaviour
     }
     void PlayerLose()
     {
-
         mDistanceManager.SaveDistance();
         mCoinManager.SaveCoins();
         IsPlayerDead = true;
@@ -60,6 +66,7 @@ public class SPlayer : MonoBehaviour
 
         IsPlayerDead = true;
         mPlayerLoseScreen.SetActive(true);
+        mPlayerLose.SetActive(true);
 
         Time.timeScale = 0.0f;
         Cursor.lockState = CursorLockMode.Confined;

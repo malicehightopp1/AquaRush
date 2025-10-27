@@ -13,6 +13,10 @@ TagManager:
   - PlayerLost
   - DistanceText
   - MaxDistanceText
+<<<<<<< HEAD
+=======
+  - LostText
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
   layers:
   - Default
   - TransparentFX
