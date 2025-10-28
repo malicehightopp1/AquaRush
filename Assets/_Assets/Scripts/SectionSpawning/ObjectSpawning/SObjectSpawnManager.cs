@@ -9,6 +9,7 @@ public class SObjectSpawnManager : MonoBehaviour
     private float[] mLanes = { -2, 0, 2 };
 
     [SerializeField] private Transform mPrefabSpawnPoint;
+
     private float mZOffset = -75;
     void Start()
     {

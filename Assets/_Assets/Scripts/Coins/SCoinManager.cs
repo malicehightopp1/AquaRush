@@ -26,26 +26,20 @@ public class SCoinManager : MonoBehaviour
         {
             int delta = value - mCurrentCoins;
             CoinsManager(delta);
-            SaveCoins();
+            //SaveCoins();
         }
     }
     private void Start()
     {
         mCurrentCoinsText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<TextMeshProUGUI>();  
-        if(SceneManager.GetActiveScene().name == "MainMenu")
+        UpdateCoinUI();
+        CoinSpawningManager();
+        if(SceneManager.GetActiveScene().name == "MainMenu_Scene") //checking if the player is in the right scene to load there coins that being the main menu
         {
             LoadCoins();
         }
-
-        mCurrentCoinsText.text = $"Coins : {mCurrentCoins.ToString()}";
-
-        UpdateCoinUI();
-
-        mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
-
-        CoinSpawningManager();
     }
-    private void CoinsManager(int CoinsToAdd)
+    private void CoinsManager(int CoinsToAdd) //managing math and amount of coins that the player has
     {
         mCoinsCollectedThisRun += CoinsToAdd;
 
@@ -74,7 +68,7 @@ public class SCoinManager : MonoBehaviour
 
             GameObject spawnedCoinOBJ = GameObject.Instantiate(RandomPrefab, mPrefabSpawnPoint.transform.position, Quaternion.identity);
             spawnedCoinOBJ.transform.position = SpawnPOS;
-            if(i == 0)
+            if(i == 0) //resetting the offset back to original spawn pos
             {
                 mzOffset = -75;
             }
@@ -84,19 +78,14 @@ public class SCoinManager : MonoBehaviour
     #region Coin Saving
     public void SaveCoins()
     {
-        int totalcoins = PlayerPrefs.GetInt("SaveCoins", 0);
-        totalcoins += mCoinsCollectedThisRun;
-
-        PlayerPrefs.SetInt("SaveCoins", totalcoins);
+        int totalcoins = PlayerPrefs.GetInt("SaveCoins", 0); //setting the save coins get int to be the variable totalcoins
+        totalcoins += mCoinsCollectedThisRun; //adding the total coins to the total coins got that run **for adding the number of coins got ona  run to your total**
 
         mCurrentCoins = totalcoins;
-        mCoinsCollectedThisRun = 0;
-        PlayerPrefs.Save();
-        Debug.Log($"Saving {totalcoins}");
+        mCoinsCollectedThisRun = 0; //reseting it back to zero
 
-        Debug.Log($"saved players coins : {mCurrentCoins} coins saved");
         PlayerPrefs.SetInt("SaveCoins", mCurrentCoins);
-        PlayerPrefs.Save();
+        PlayerPrefs.Save(); //actually saving the current coins 
     }
     public void LoadCoins()
     {
@@ -106,11 +95,6 @@ public class SCoinManager : MonoBehaviour
 
         UpdateCoinUI();
         //ResetCoins(); **testing**
-        Debug.Log($"Loading {mCurrentCoins}");
-    }
-    private void UpdateCoinUI()
-    {
-        mCurrentCoinsText.text = $"Coins : {mCurrentCoins.ToString()}";
     }
     public void ResetCoins() //for testing reseting the coins back to 0
     {
@@ -118,10 +102,10 @@ public class SCoinManager : MonoBehaviour
         PlayerPrefs.Save();                 
         mCurrentCoins = 0;                  
         UpdateCoinUI();                     
-        Debug.Log("Coins reset to 0");
-
-        mCurrentCoinsText.text = "Coins : " + mCurrentCoins.ToString();
-        Debug.Log($"Loading coins : {mCurrentCoins} Coins loaded");
+    }
+    private void UpdateCoinUI() //instead of calling this a bunch of times just call the function to handle it
+    {
+        mCurrentCoinsText.text = $"Coins : {mCurrentCoins.ToString()}";
     }
     #endregion
 }
