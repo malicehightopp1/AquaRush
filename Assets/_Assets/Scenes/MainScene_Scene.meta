@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 27f0a2cdbebad4247aa6c14bd53b1027
+=======
+<<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene_Scene.meta
+guid: 27f0a2cdbebad4247aa6c14bd53b1027
+========
+guid: fe4b49ed0d4ab5c47998779589b97bd7
+>>>>>>>> 1bdc505 (Main menu rework and general bug fixes):Assets/_Assets/Scenes/MainMenu_Scene.meta
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

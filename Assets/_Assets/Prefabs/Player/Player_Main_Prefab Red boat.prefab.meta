@@ -1,7 +1,23 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/_Assets/Prefabs/Player/Player_Main_Prefab Red boat.prefab.meta
 guid: db6013b2590a6e848a62b4a9a7e71715
+========
+guid: f6bc21606dc76734dba3111c22f3e6f4
+>>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2:Assets/_Assets/Prefabs/Player/Player_Main_Prefab sail boat.prefab.meta
 PrefabImporter:
   externalObjects: {}
+=======
+<<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene_Scene/Sky and Fog Settings.asset.meta
+guid: c30aa110eac4c8542aa2bb441114a37c
+NativeFormatImporter:
+========
+guid: db6013b2590a6e848a62b4a9a7e71715
+PrefabImporter:
+>>>>>>>> 1bdc505 (Main menu rework and general bug fixes):Assets/_Assets/Prefabs/Player/Player_Main_Prefab Red boat.prefab.meta
+  externalObjects: {}
+  mainObjectFileID: 11400000
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   userData: 
   assetBundleName: 
   assetBundleVariant: 

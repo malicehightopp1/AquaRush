@@ -6,6 +6,7 @@ public class SDestroySectionsManager : MonoBehaviour
         if(other.gameObject.CompareTag("DestroySection") || other.gameObject.CompareTag("Coin") || other.gameObject.CompareTag("HitOBJ"))
         {
             Destroy(other.gameObject);
+            Debug.Log($"hit: {other.gameObject.name}");
         }
     }
 }

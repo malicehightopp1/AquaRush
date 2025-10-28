@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/_Assets/Prefabs/Player/Player_Main_Prefab Green Boat.prefab.meta
 guid: 9912ac7137eb1664292ec51b9ceff474
+========
+guid: 0b7b40ac8382f80499d0cc00e75aba45
+>>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2:Assets/_Assets/Prefabs/Player/Player_Main_Prefab Row boat.prefab.meta
+=======
+<<<<<<<< HEAD:Assets/_Assets/Prefabs/Player/Player_Main_Prefab.prefab.meta
+guid: eb504c361a3833942b6143616a95ebfe
+========
+guid: 9912ac7137eb1664292ec51b9ceff474
+>>>>>>>> 1bdc505 (Main menu rework and general bug fixes):Assets/_Assets/Prefabs/Player/Player_Main_Prefab Green Boat.prefab.meta
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 PrefabImporter:
   externalObjects: {}
   userData: 

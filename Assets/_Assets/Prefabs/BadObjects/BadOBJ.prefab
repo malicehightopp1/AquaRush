@@ -115,7 +115,14 @@ GameObject:
   - component: {fileID: 426710722228632313}
   - component: {fileID: 1987794571507575464}
   - component: {fileID: 7160589026538944951}
+<<<<<<< HEAD
   - component: {fileID: 6575318404930475589}
+=======
+<<<<<<< HEAD
+=======
+  - component: {fileID: 6575318404930475589}
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Layer: 0
   m_Name: BadOBJ
   m_TagString: HitOBJ
@@ -172,6 +179,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3643823, y: 1.100846, z: 2.7807627}
   m_Center: {x: 0.00075365824, y: 0.55498594, z: -0.014237753}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!54 &6575318404930475589
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -199,3 +211,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2

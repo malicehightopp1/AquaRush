@@ -4,8 +4,10 @@ public class SCoinPickup : MonoBehaviour
     SCoinManager mCoinManager;
     private float mRotationSpeed = 100f;
     private Transform mTransform;
+    private bool mDestroyedcollidingobj = false;
     private void Start()
     {
+        mDestroyedcollidingobj = false;
         mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
     }
     private void Update()

@@ -10,9 +10,14 @@ public class SObjectSpawnManager : MonoBehaviour
 
     [SerializeField] private Transform mPrefabSpawnPoint;
 
+<<<<<<< HEAD
+=======
+    private bool mDestroyedcollidingcoin = false;
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
     private float mZOffset = -75;
     void Start()
     {
+        mDestroyedcollidingcoin = false;
         ObjectSpawnManager();
     }
     private void ObjectSpawnManager()

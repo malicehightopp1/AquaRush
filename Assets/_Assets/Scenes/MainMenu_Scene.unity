@@ -26,7 +26,15 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+<<<<<<< HEAD
   m_SkyboxMaterial: {fileID: 0}
+=======
+<<<<<<< HEAD
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+=======
+  m_SkyboxMaterial: {fileID: 0}
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -119,6 +127,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!1 &774135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2735,11 @@ Transform:
   m_GameObject: {fileID: 1011789499}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.49, y: -0.39, z: -23.85}
+=======
+  m_LocalPosition: {x: 1.65, y: -0.39, z: -23.85}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_LocalScale: {x: 2.789795, y: 2.789795, z: 2.789795}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3300,6 +3317,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210480162}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!1 &1226369818
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,7 +3332,14 @@ GameObject:
   - component: {fileID: 1226369821}
   - component: {fileID: 1226369820}
   - component: {fileID: 1226369819}
+<<<<<<< HEAD
   - component: {fileID: 1226369822}
+=======
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1226369822}
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3371,8 +3399,18 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
+<<<<<<< HEAD
   m_HDR: 0
   m_AllowMSAA: 0
+=======
+<<<<<<< HEAD
+  m_HDR: 1
+  m_AllowMSAA: 1
+=======
+  m_HDR: 0
+  m_AllowMSAA: 0
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -3386,6 +3424,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226369818}
   serializedVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_LocalRotation: {x: 0.064712286, y: -0, z: -0, w: 0.99790394}
   m_LocalPosition: {x: -0.103, y: 1.41, z: -31.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -4069,11 +4114,20 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 25.33551, y: 0, z: -29.68326}
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!1 &1368079955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4450,8 +4504,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -20.597778, y: -75}
   m_SizeDelta: {x: 522.731, y: 50}
+=======
+  m_AnchoredPosition: {x: 0, y: -75}
+  m_SizeDelta: {x: 406.33, y: 50}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1524734536
 MonoBehaviour:
@@ -4475,8 +4534,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f5b7942fae00d4439ac98d6cdbb946d, type: 2}
   m_sharedMaterial: {fileID: -1142620906745838531, guid: 8f5b7942fae00d4439ac98d6cdbb946d, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4674,8 +4738,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -20.5978, y: -25}
   m_SizeDelta: {x: 522.7368, y: 50}
+=======
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 406.33447, y: 50}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1585326255
 MonoBehaviour:
@@ -4699,8 +4768,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Max Distance Text
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f5b7942fae00d4439ac98d6cdbb946d, type: 2}
   m_sharedMaterial: {fileID: -1142620906745838531, guid: 8f5b7942fae00d4439ac98d6cdbb946d, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5692,6 +5766,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864315781}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!1 &1868463498
 GameObject:
   m_ObjectHideFlags: 0
@@ -5702,7 +5780,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1868463500}
   - component: {fileID: 1868463499}
+<<<<<<< HEAD
   - component: {fileID: 1868463501}
+=======
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1868463501}
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5721,7 +5806,15 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+<<<<<<< HEAD
   m_Intensity: 100000
+=======
+<<<<<<< HEAD
+  m_Intensity: 1
+=======
+  m_Intensity: 100000
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5761,18 +5854,41 @@ Light:
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 1.0117e-41, y: 2.524355e-29, z: 0, w: 9.1645156e+20}
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+<<<<<<< HEAD
   m_LightUnit: 2
+=======
+<<<<<<< HEAD
+  m_LightUnit: 1
+=======
+  m_LightUnit: 2
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
 --- !u!4 &1868463500
@@ -5790,6 +5906,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!114 &1868463501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6562,10 +6683,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134542285}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  - {fileID: 1226369821}
+  - {fileID: 1868463500}
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
   - {fileID: 277972211}
   - {fileID: 1353781505}
   - {fileID: 1226369821}
@@ -6579,3 +6711,7 @@ SceneRoots:
   - {fileID: 1390511613}
   - {fileID: 864392304}
   - {fileID: 1386457967}
+<<<<<<< HEAD
+=======
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2

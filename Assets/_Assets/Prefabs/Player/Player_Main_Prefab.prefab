@@ -91,7 +91,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mPlayerHits: 0
   mPlayerMaxHits: 3
+<<<<<<< HEAD
   mPlayerRenderer: {fileID: 0}
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
 --- !u!65 &1898671011129279020
 BoxCollider:
   m_ObjectHideFlags: 0
