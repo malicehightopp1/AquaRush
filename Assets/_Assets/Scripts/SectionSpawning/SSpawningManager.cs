@@ -21,7 +21,6 @@ public class SSpawningManager : MonoBehaviour
     {
         GameObject Child = GetRandomObject(mSectionPrefabs);
         Instantiate(Child, new Vector3(0, 0 , mSectionOffset), Quaternion.identity);
-        Debug.Log($"Spawned : {Child.gameObject.name}");
     }
     public void SpawnHandlingGetter()
     {
@@ -37,7 +36,6 @@ public class SSpawningManager : MonoBehaviour
     {
         GameObject Child = GetRandomObject(mDecorPrefabs);
         Instantiate(Child, new Vector3(0, 0, mDecorOffset), Quaternion.identity);
-        Debug.Log($"Spawned Decor: {Child.gameObject.name}");
     }
     public void SpawnDecorManagerGetter()
     {

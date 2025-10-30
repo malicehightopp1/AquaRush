@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - DestroySection
+  - Trigger
+  - Coin
+  - HitOBJ
+  - CoinText
+  - HitText
+  - PlayerLost
+  - DistanceText
+  - MaxDistanceText
+  - LostText
   layers:
   - Default
   - TransparentFX

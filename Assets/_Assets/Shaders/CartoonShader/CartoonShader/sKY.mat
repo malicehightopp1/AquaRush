@@ -70,8 +70,8 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Curve: 0.0012
-    - _Depth: 0.06
+    - _Curve: 0.02
+    - _Depth: 0.009
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0

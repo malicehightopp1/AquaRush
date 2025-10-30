@@ -15,7 +15,7 @@ public class SSectionTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(mCanBeTriggered == true && other.gameObject.CompareTag("Trigger"))
+        if(mCanBeTriggered == true && other.gameObject.CompareTag("Player"))
         {
             mCanBeTriggered = false;
             mCoinManager.CoinSpawnGetter();
