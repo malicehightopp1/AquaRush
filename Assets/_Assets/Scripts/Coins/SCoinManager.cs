@@ -82,7 +82,20 @@ public class SCoinManager : MonoBehaviour
         totalcoins += mCoinsCollectedThisRun; //adding the total coins to the total coins got that run **for adding the number of coins got ona  run to your total**
 
         mCurrentCoins = totalcoins;
+<<<<<<< HEAD
         mCoinsCollectedThisRun = 0; //reseting it back to zero
+=======
+<<<<<<< HEAD
+        mCoinsCollectedThisRun = 0; //reseting it back to zero
+=======
+<<<<<<< HEAD
+        mCoinsCollectedThisRun = 0; //reseting it back to zero
+=======
+        mCoinsCollectedThisRun = 0;
+        PlayerPrefs.Save();
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
 
         PlayerPrefs.SetInt("SaveCoins", mCurrentCoins);
         PlayerPrefs.Save(); //actually saving the current coins 

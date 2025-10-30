@@ -14,13 +14,41 @@ public class SDistanceManager : MonoBehaviour
 
     [Header("References")]
     private SSpawningManager mSpawningManager;
+<<<<<<< HEAD
     public void GetSaveDistance() => SaveDistance();
     public void GetLoadDistance() => LoadDistance();
+=======
+<<<<<<< HEAD
+    public void GetSaveDistance() => SaveDistance();
+    public void GetLoadDistance() => LoadDistance();
+=======
+<<<<<<< HEAD
+    public void GetSaveDistance() => SaveDistance();
+    public void GetLoadDistance() => LoadDistance();
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
     private void Start()
     {
         mDistanceText = GameObject.FindGameObjectWithTag("DistanceText")?.GetComponent<TextMeshProUGUI>();
         mMaxDistanceText = GameObject.FindGameObjectWithTag("MaxDistanceText")?.GetComponent<TextMeshProUGUI>();
+<<<<<<< HEAD
         mSpawningManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<SSpawningManager>();
+=======
+<<<<<<< HEAD
+        mSpawningManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<SSpawningManager>();
+=======
+<<<<<<< HEAD
+        mSpawningManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<SSpawningManager>();
+=======
+<<<<<<< HEAD
+=======
+        mSpawningManager = GameObject.FindGameObjectWithTag("GameController")?.GetComponent<SSpawningManager>();
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
         if(SceneManager.GetActiveScene().name == "MainMenu_Scene")
         {
             LoadDistance();
@@ -29,7 +57,19 @@ public class SDistanceManager : MonoBehaviour
     private void Update()
     {
         SpeedChange();
+<<<<<<< HEAD
         if(SceneManager.GetActiveScene().name != "MainMenu_Scene")
+=======
+<<<<<<< HEAD
+        if(SceneManager.GetActiveScene().name != "MainMenu_Scene")
+=======
+<<<<<<< HEAD
+        if(SceneManager.GetActiveScene().name != "MainMenu_Scene")
+=======
+        if(SceneManager.GetActiveScene().name != "MainMenu")
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
         {
             PlayerDistance();
         }
@@ -38,7 +78,14 @@ public class SDistanceManager : MonoBehaviour
     {
         mDistance += (1 * 3f) * Time.deltaTime;
         mDistanceText?.SetText($"Distance : {mDistance.ToString("F2")}");
+<<<<<<< HEAD
         FindFirstObjectByType<SChallengeManager>().AddProgressToType(ChallengeType.ReachDistance, 1);
+=======
+<<<<<<< HEAD
+        FindFirstObjectByType<SChallengeManager>().AddProgressToType(ChallengeType.ReachDistance, 1);
+=======
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
     }
     private void SaveDistance() //not currently doing this
     {
@@ -65,5 +112,20 @@ public class SDistanceManager : MonoBehaviour
             mSpawningManager.MoveSpeed += 5f;
             mNextSpeedChange += 400;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    }
+    private void SpeedChange()
+    {
+        if (mDistance >= mNextSpeedChange)
+        {
+            Debug.Log($"Current Distance is: {mDistance} and Current Speed if: {mSpawningManager.MoveSpeed}");
+            mSpawningManager.MoveSpeed += 5f;
+            mNextSpeedChange += 400;
+        }
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
     }
 }

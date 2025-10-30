@@ -16,6 +16,13 @@ public class SPlayer : MonoBehaviour
     private SCameraRig mRig;
     private SDistanceManager mDistanceManager;
     private SCoinManager mCoinManager;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
     private GameObject mPlayerLose;
 
     [Header("Player hit effetcs")]
@@ -25,6 +32,18 @@ public class SPlayer : MonoBehaviour
 
     private Color mOriginalColor;
     private Coroutine playerHitEffect;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+    private GameObject mPlayerLose;
+>>>>>>> 1bdc505 (Main menu rework and general bug fixes)
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
     public bool IsPlayerDead
     {
         get => mIsPlayerIsDead;
@@ -44,9 +63,24 @@ public class SPlayer : MonoBehaviour
         mPlayerLose = GameObject.FindGameObjectWithTag("LostText");
         mPlayerLose.SetActive(false);
 
+<<<<<<< HEAD
         mPlayerRenderer = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MeshRenderer>();
         mOriginalColor = mPlayerRenderer.material.color; //setting the players original color
 
+=======
+<<<<<<< HEAD
+        mPlayerRenderer = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MeshRenderer>();
+        mOriginalColor = mPlayerRenderer.material.color; //setting the players original color
+
+=======
+<<<<<<< HEAD
+        mPlayerRenderer = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MeshRenderer>();
+        mOriginalColor = mPlayerRenderer.material.color; //setting the players original color
+
+=======
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
         mPlayerLoseScreen.SetActive(false);
         mIsPlayerIsDead = false;
         mPlayerHits = mPlayerMaxHits;
@@ -67,7 +101,23 @@ public class SPlayer : MonoBehaviour
     }
     void PlayerLose() //handling all actions once player dies/loses
     {
+<<<<<<< HEAD
         mDistanceManager.GetSaveDistance();
+=======
+<<<<<<< HEAD
+        mDistanceManager.GetSaveDistance();
+=======
+<<<<<<< HEAD
+        mDistanceManager.GetSaveDistance();
+=======
+        mDistanceManager.SaveDistance();
+        mCoinManager.SaveCoins();
+        IsPlayerDead = true;
+        mPlayerLoseScreen.SetActive(true);
+
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
         mCoinManager.SaveCoins();
 
         IsPlayerDead = true;

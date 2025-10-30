@@ -1,8 +1,38 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
 guid: fe4b49ed0d4ab5c47998779589b97bd7
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/_Assets/Scenes/MainMenu_Scene.meta
+guid: fe4b49ed0d4ab5c47998779589b97bd7
+folderAsset: yes
+DefaultImporter:
+========
+guid: fd287e838d27fb9429308f535eef7bd3
+NativeFormatImporter:
+>>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2:Assets/_Assets/Scenes/MainMenu_Scene/Sky and Fog Settings.asset.meta
+  externalObjects: {}
+  mainObjectFileID: 11400000
+=======
+<<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene_Scene.meta
+guid: 27f0a2cdbebad4247aa6c14bd53b1027
+========
+guid: fe4b49ed0d4ab5c47998779589b97bd7
+>>>>>>>> 1bdc505 (Main menu rework and general bug fixes):Assets/_Assets/Scenes/MainMenu_Scene.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
+>>>>>>> a909adbd4b7370d33cfc4d4a898e92614d94b53b
   userData: 
   assetBundleName: 
   assetBundleVariant: 
