@@ -15,7 +15,7 @@ public class SCoinPickup : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player")) //actually detecting coins
         {
             int coins = mCoinManager.CurrentCoins; 
             mCoinManager.CurrentCoins += 1; 

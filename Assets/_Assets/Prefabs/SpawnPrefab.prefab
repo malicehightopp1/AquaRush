@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735695307898908565}
   - component: {fileID: 1553745935600262844}
+  - component: {fileID: 275990577119619772}
   m_Layer: 0
   m_Name: Next_Section_Trigger
   m_TagString: Trigger
@@ -53,6 +54,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6, y: 6, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &275990577119619772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794607038133019258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877beaaa5a4316440b01ef75e4be8108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCanBeTriggered: 1
 --- !u!1 &8568339448248358143
 GameObject:
   m_ObjectHideFlags: 0

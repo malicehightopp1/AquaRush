@@ -7,13 +7,11 @@ public class SSkinSelection : MonoBehaviour
     private GameObject mCurrentSelectedSkin;
     [SerializeField] private int mSelectedCharacter = 0;
 
-    private Animation mIdleAnimation;
     public void Start()
     {
         mSelectedCharacter = PlayerPrefs.GetInt("SelectedCharacter", mSelectedCharacter);
+        Debug.Log($"Selected boat is: {mSelectedCharacter}");
         mCharacters[mSelectedCharacter].SetActive(true);
-        mIdleAnimation = mCharacters[mSelectedCharacter].GetComponent<Animation>();
-        UpdateAnimations();
     }
     public void NextCharacter()
     {
@@ -36,13 +34,5 @@ public class SSkinSelection : MonoBehaviour
         mCurrentSelectedSkin = mCharacters[mSelectedCharacter];
         Debug.Log($"Selected skin : {mCurrentSelectedSkin.gameObject.name}");
         PlayerPrefs.SetInt("SelectedCharacter", mSelectedCharacter);
-    }
-    private void Update()
-    {
-        UpdateAnimations();
-    }
-    private void UpdateAnimations()
-    {
-        mIdleAnimation.Play();
     }
 }

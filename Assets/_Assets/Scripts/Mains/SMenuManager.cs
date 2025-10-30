@@ -41,18 +41,17 @@ public class SMenuManager : MonoBehaviour
     }
     private void MainMenuOnClick()
     {
-        mDistanceManager.SaveDistance();
+        mDistanceManager.GetSaveDistance();
         mCoinManager.SaveCoins();
         Debug.Log("MainMenu");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         SceneManager.LoadScene(0);
 
-        mDistanceManager.LoadDistance();
+        mDistanceManager.GetLoadDistance();
         mCoinManager.LoadCoins();
 
         mCoinManager.LoadCoins();
-
     }
     private void PlayAgain()
     {
