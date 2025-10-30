@@ -1,6 +1,21 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c30aa110eac4c8542aa2bb441114a37c
 NativeFormatImporter:
+=======
+<<<<<<< HEAD
+guid: c30aa110eac4c8542aa2bb441114a37c
+NativeFormatImporter:
+=======
+<<<<<<<< HEAD:Assets/_Assets/Scenes/MainScene_Scene/Sky and Fog Settings.asset.meta
+guid: c30aa110eac4c8542aa2bb441114a37c
+NativeFormatImporter:
+========
+guid: db6013b2590a6e848a62b4a9a7e71715
+PrefabImporter:
+>>>>>>>> 1bdc505 (Main menu rework and general bug fixes):Assets/_Assets/Prefabs/Player/Player_Main_Prefab Red boat.prefab.meta
+>>>>>>> 51e0c283b6d0f5a913a4895f1a032ffd5ed5b6c2
+>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6
   externalObjects: {}
   mainObjectFileID: 11400000
   userData: 

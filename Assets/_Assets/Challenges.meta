@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Assets/Challenges.meta
 guid: 437cd061eeed59640b63ccf17c2448c9
+========
+guid: 0a622b7fd64c34f4d8f0d12335eb4cd2
+>>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6:Assets/_Assets/Scripts/Daily Challenges.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

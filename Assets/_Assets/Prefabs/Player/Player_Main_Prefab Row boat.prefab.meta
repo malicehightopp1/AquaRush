@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Assets/Prefabs/Player/Player_Main_Prefab Row boat.prefab.meta
 guid: 0b7b40ac8382f80499d0cc00e75aba45
 PrefabImporter:
+========
+guid: fd287e838d27fb9429308f535eef7bd3
+NativeFormatImporter:
+>>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6:Assets/_Assets/Scenes/MainMenu_Scene/Sky and Fog Settings.asset.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

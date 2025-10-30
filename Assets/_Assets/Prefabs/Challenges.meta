@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Assets/Prefabs/Challenges.meta
 guid: 3133fcb2bbe9a66438f8f06d6962dcf8
 folderAsset: yes
 DefaultImporter:
+========
+guid: bca9c89fddedbcf4eb8c654c19d88c07
+NativeFormatImporter:
+>>>>>>>> 8b580aee80f936907271dfac4924fcb1ad414cf6:Assets/_Assets/Shaders/CartoonShader/CartoonShader/Water effect Mat.mat.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
