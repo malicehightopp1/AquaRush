@@ -19,6 +19,10 @@ public class SChallenges : ScriptableObject
     [Header("Rewards")]
     public int mRewardCoins = 50;
     public bool mIsCompleted = false;
+
+    [HideInInspector]
+    public SChallengeTimer mTimer;
+
     public void ResetProgress()
     {
         mCurrentValue = 0;

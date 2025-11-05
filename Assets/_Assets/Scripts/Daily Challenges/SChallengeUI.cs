@@ -5,8 +5,10 @@ using UnityEngine.UI;
 public class SChallengeUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI mNameText;
+    [SerializeField] private GameObject mCompletedOverlay;
     [SerializeField] private TextMeshProUGUI mDecriptionText;
     [SerializeField] private Slider mProgressBar;
+    [SerializeField] private TextMeshProUGUI mTimerText;
 
     private SChallenges mChallenges;
     public void Start()
@@ -18,11 +20,15 @@ public class SChallengeUI : MonoBehaviour
         mChallenges = challenges;
         if(challenges.mChallengeType == ChallengeType.CollectCoins) //changing default value to certain value 
         {
-            challenges.mCompletevalue = 100;
+            challenges.mCompletevalue = 10;
         }
         if (challenges.mChallengeType == ChallengeType.ReachDistance)
         {
-            challenges.mCompletevalue = 500;
+            challenges.mCompletevalue = 50;
+        }
+        if(challenges.mTimer != null && challenges.mTimer.mTimerInProgress)
+        {
+            InvokeRepeating(nameof(UpdateTimerText), 0f, 1f); //update UI every second if timer is in progress
         }
         UpdateUI();
     }
@@ -42,6 +48,19 @@ public class SChallengeUI : MonoBehaviour
     }
     public void ChallengeDoneUiUpdate()
     {
-        mNameText.text = "Challenge Complete!";
+        mCompletedOverlay.SetActive(true);
+        mProgressBar.value = 1f; // full progress
+    }
+    public void ResetUI()
+    {
+        mCompletedOverlay.SetActive(false);
+        mProgressBar.value = 0f; // reset progress
+    }
+    private void UpdateTimerText()
+    {
+        if (mChallenges.mTimer != null && mChallenges.mTimer.mTimerInProgress)
+        {
+            mTimerText.text = mChallenges.mTimer.GetFormattedTime();
+        }
     }
 }

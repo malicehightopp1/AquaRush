@@ -19,3 +19,4 @@ MonoBehaviour:
   mCurrentValue: 0
   mRewardCoins: 50
   mIsCompleted: 0
+  mTimer: {fileID: 0}

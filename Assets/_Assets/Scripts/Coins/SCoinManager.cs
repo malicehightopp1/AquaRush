@@ -23,7 +23,7 @@ public class SCoinManager : MonoBehaviour
     [Header("Coin visual")]
     [SerializeField] private Transform mCoinVisualSpawnPoint;
     [SerializeField] private GameObject mCoinVisualPrefab;
-    [SerializeField] private TextMeshProUGUI mCoinVisualText;
+    private TextMeshProUGUI mCoinVisualText;
     private float mzOffset = -75;
     public int CurrentCoins //getter and setter for coins manager
     {
@@ -37,6 +37,7 @@ public class SCoinManager : MonoBehaviour
     private void Start()
     {
         mCurrentCoinsText = GameObject.FindGameObjectWithTag("CoinText").GetComponent<TextMeshProUGUI>();  
+        mCoinVisualText = mCoinVisualPrefab?.gameObject.GetComponentInChildren<TextMeshProUGUI>();
         UpdateCoinUI();
         CoinSpawningManager();
         if(SceneManager.GetActiveScene().name == "MainMenu_Scene") //checking if the player is in the right scene to load there coins that being the main menu
@@ -51,15 +52,15 @@ public class SCoinManager : MonoBehaviour
         mCurrentCoins += CoinsToAdd;
         FindFirstObjectByType<SChallengeManager>().AddProgressToType(ChallengeType.CollectCoins, 1f);
         mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000);
+        mCoinVisualText.text = $"+{CoinsToAdd.ToString()}";
         StartCoroutine(mCoinVisual());
         UpdateCoinUI();
     }
-    private IEnumerator mCoinVisual()
+    private IEnumerator mCoinVisual() //spawning a visual show of how many coins were added
     {
-        mCoinVisualText.text = $"+{mCoinsCollectedThisRun.ToString()}";
-        Instantiate(mCoinVisualPrefab, mCoinVisualSpawnPoint);
+        GameObject clone = Instantiate(mCoinVisualPrefab, mCoinVisualSpawnPoint);
         yield return new WaitForSeconds(0.5f);
-        //Destroy(mCoinVisualPrefab.);
+        Destroy(clone.gameObject);
     }
     #region Coin spawning
     private GameObject GetRandomObject(List<GameObject> list) //picking a random pattern of coins

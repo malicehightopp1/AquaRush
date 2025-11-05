@@ -12,13 +12,10 @@ public class SChallengeManager : MonoBehaviour
     [SerializeField] private GameObject mUiSpawnPrefab;
 
     [Header("References")]
-    private SChallengeTimer mTimer;
     private SCoinManager mCoinManager;
     private void Start()
     {
-        mTimer = GameObject.FindGameObjectWithTag("GameController").GetComponent<SChallengeTimer>();
         mCoinManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<SCoinManager>();
-        mTimer.mTimerFinish += StartNewChallenge;
         LoadChallenge();
     }
     private void LoadChallenge()
@@ -32,26 +29,23 @@ public class SChallengeManager : MonoBehaviour
             GameObject ui = Instantiate(mUiSpawnPrefab, mUiSpawnTransform);
             var uiHandler = ui.GetComponent<SChallengeUI>();
             uiHandler.Setup(challenge);
-            if(challenge.mIsCompleted && !mTimer.mTimerInProgress)
+            
+            if (challenge.mTimer == null)
             {
-                mTimer.startChallengeTimer(challenge);
+                GameObject TimerGo = new GameObject($"{challenge.mChallengeName}_Timer");
+                challenge.mTimer = TimerGo.AddComponent<SChallengeTimer>();       
+            }
+            challenge.mTimer.mTimerFinish += () =>
+            {
+                challenge.ResetProgress();
+                uiHandler.ResetUI();
+            };
+            if (challenge.mIsCompleted && !challenge.mTimer.mTimerInProgress)
+            {
+                challenge.mTimer.startChallengeTimer();
                 uiHandler.ChallengeDoneUiUpdate();
                 mCoinManager.CurrentCoins += challenge.mRewardCoins; //reward for completing challenge
             }
-        }
-    }
-    private void StartNewChallenge()
-    {
-        if (mTimer.mTimerInProgress == false)
-        {
-            foreach (var challenge in challenges)
-            {
-                if (challenge.mIsCompleted)
-                {
-                    challenge.ResetProgress();
-                }
-            }
-            LoadChallenge();
         }
     }
     public void AddProgressToType(ChallengeType type, float amount)
@@ -61,6 +55,14 @@ public class SChallengeManager : MonoBehaviour
             if(challenge.mChallengeType == type && !challenge.mIsCompleted)
             {
                 challenge.AddProgress(amount);
+                if(challenge.mIsCompleted)
+                {
+                    mCoinManager.CurrentCoins += challenge.mRewardCoins; //reward for completing challenge
+                    if(challenge.mTimer != null && !challenge.mTimer.mTimerInProgress)
+                    {
+                        challenge.mTimer.startChallengeTimer();
+                    }
+                }
             }
         }
         LoadChallenge();

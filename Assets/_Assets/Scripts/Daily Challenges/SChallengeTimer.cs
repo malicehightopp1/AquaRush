@@ -7,8 +7,8 @@ public class SChallengeTimer : MonoBehaviour
     private DateTime mTimerEnd;
     private TimeSpan mRemainingtime; 
 
-    [SerializeField] TextMeshProUGUI mTestText;
     public Action mTimerFinish;
+    [SerializeField] private TextMeshProUGUI mTimerText;
     private void Start()
     {
         mTimerInProgress = false;
@@ -20,9 +20,9 @@ public class SChallengeTimer : MonoBehaviour
             timerManager();        
         }
     }
-    public void startChallengeTimer(SChallenges challenge) //call to start timer **once you compete the challenge**
+    public void startChallengeTimer() //call to start timer **once you compete the challenge**
     {
-        TimeSpan duration = new TimeSpan(0, 0, 10);
+        TimeSpan duration = new TimeSpan(23, 59, 59);
         mTimerEnd = DateTime.Now.Add(duration);
         mTimerInProgress = true;
     }
@@ -35,14 +35,18 @@ public class SChallengeTimer : MonoBehaviour
             {
                 mRemainingtime = TimeSpan.Zero;
                 mTimerInProgress = false;
-                mTestText.text = "";
-
                 mTimerFinish?.Invoke();
             }
-            else
+            if (mTimerText != null)
             {
-                mTestText.text = $"{mRemainingtime.Hours:D2}:{mRemainingtime.Minutes:D2}:{mRemainingtime.Seconds:D2}";
+                mTimerText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", mRemainingtime.Hours, mRemainingtime.Minutes, mRemainingtime.Seconds);
             }
+
         }
+    }
+    public string GetFormattedTime()
+    {
+        if (!mTimerInProgress) return "00:00:00";
+        return $"{mRemainingtime.Hours:D2}:{mRemainingtime.Minutes:D2}:{mRemainingtime.Seconds:D2}";
     }
 }
