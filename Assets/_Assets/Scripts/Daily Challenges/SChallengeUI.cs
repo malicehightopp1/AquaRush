@@ -44,7 +44,16 @@ public class SChallengeUI : MonoBehaviour
     {
         if(mChallenges == null) return;
         mNameText.text = mChallenges.name;
-        mDecriptionText.text = mChallenges.mChallengeDescription;
+        if (mChallenges.mChallengeType == ChallengeType.CollectCoins)
+        {
+            mChallenges.mCompletevalue = 10;
+            mDecriptionText.text = $"Collect a total of {mChallenges.mCompletevalue} Coins";
+        }
+        if (mChallenges.mChallengeType == ChallengeType.ReachDistance)
+        {
+            mChallenges.mCompletevalue = 100;
+            mDecriptionText.text = $"Go a total distance of {mChallenges.mCompletevalue}";
+        }
         mProgressBar.value = mChallenges.mCurrentValue;
         mProgressBar.maxValue = mChallenges.mCompletevalue;
     }
@@ -68,5 +77,9 @@ public class SChallengeUI : MonoBehaviour
             CancelInvoke(nameof(UpdateTimerText));
             mDone = false;
         }
+    }
+    public TextMeshProUGUI GetTimerText()
+    {
+        return mTimerText;
     }
 }

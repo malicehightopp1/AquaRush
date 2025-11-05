@@ -22,7 +22,6 @@ public class SChallenges : ScriptableObject
 
     [HideInInspector]
     public SChallengeTimer mTimer;
-
     public void ResetProgress()
     {
         mCurrentValue = 0;

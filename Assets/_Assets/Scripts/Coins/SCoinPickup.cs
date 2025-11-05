@@ -21,5 +21,9 @@ public class SCoinPickup : MonoBehaviour
             mCoinManager.CurrentCoins += 1; 
             Destroy(this.gameObject);
         }
+        else if(other.gameObject.CompareTag("HitOBJ"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

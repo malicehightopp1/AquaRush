@@ -5164,6 +5164,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4674858}
+  - {fileID: 712242516}
   - {fileID: 238850455}
   - {fileID: 1953436493}
   - {fileID: 1353229197}
@@ -5172,7 +5173,6 @@ RectTransform:
   - {fileID: 158060336}
   - {fileID: 375216709}
   - {fileID: 130358008}
-  - {fileID: 712242516}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6384,7 +6384,6 @@ MonoBehaviour:
   mCurrentCoins: 0
   mCoinsCollectedThisRun: 0
   mPrefabList:
-  - {fileID: 1073216896954475210, guid: bd6108ee7c8556a458a36812513158fc, type: 3}
   - {fileID: 8791286150897021776, guid: c5a4cc180f8dfd2488081f1c80534416, type: 3}
   mNumberOfCoinsSpawned: 5
   mPrefabSpawnPoint: {fileID: 678859464}

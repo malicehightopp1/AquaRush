@@ -29,8 +29,12 @@ public class SChallengeManager : MonoBehaviour
             if (challenge.mTimer == null)
             {
                 GameObject TimerGo = new GameObject($"{challenge.mChallengeName}_Timer");
-                challenge.mTimer = TimerGo.AddComponent<SChallengeTimer>();       
+                challenge.mTimer = TimerGo.AddComponent<SChallengeTimer>();
+                challenge.mTimer.Init(challenge.mChallengeName);
             }
+
+            var uihandler = ui.GetComponent<SChallengeUI>();
+            challenge.mTimer.mTimerText = uiHandler.GetTimerText();
             challenge.mTimer.mTimerFinish += () =>
             {
                 challenge.ResetProgress();

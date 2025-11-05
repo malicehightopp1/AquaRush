@@ -8,7 +8,7 @@ public class SChallengeTimer : MonoBehaviour
     private TimeSpan mRemainingtime; 
 
     public Action mTimerFinish;
-    [SerializeField] private TextMeshProUGUI mTimerText;
+    public TextMeshProUGUI mTimerText;
 
     private string mSaveKey;
     private void Start()
