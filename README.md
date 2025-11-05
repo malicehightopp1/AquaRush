@@ -23,11 +23,10 @@ AquaRush is an endless runner game based on subway surfer, but the twist is its 
     Simple coin collection system 
     - keeps track of the number of coins the player collects
     - used to buy powerups or boats
-- ### Boat selection system
-    Simple boat skin changing
-    - saves and keeps track of what boat the player is using
-    - some can be bought using the coins
-    - player starts with 3 basic boats
+- ### Challenge system
+    challenges that renew every 24 hours
+    - coin collection and distance challenges
+    - get rewards for finishing the challenges 
   ![main menu](Assets/_Assets/Images/MainMenu.png)
 ---
 # core classes
