@@ -51,7 +51,7 @@ public class SCoinManager : MonoBehaviour
 
         mCurrentCoins += CoinsToAdd;
         FindFirstObjectByType<SChallengeManager>().AddProgressToType(ChallengeType.CollectCoins, 1f);
-        mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000);
+        mCurrentCoins = Mathf.Clamp(mCurrentCoins, 0, 10000000);
         mCoinVisualText.text = $"+{CoinsToAdd.ToString()}";
         StartCoroutine(mCoinVisual());
         UpdateCoinUI();

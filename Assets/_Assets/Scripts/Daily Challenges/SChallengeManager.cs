@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SChallengeManager : MonoBehaviour
 {
@@ -39,13 +35,8 @@ public class SChallengeManager : MonoBehaviour
             {
                 challenge.ResetProgress();
                 uiHandler.ResetUI();
-            };
-            if (challenge.mIsCompleted && !challenge.mTimer.mTimerInProgress)
-            {
-                challenge.mTimer.startChallengeTimer();
                 uiHandler.ChallengeDoneUiUpdate();
-                mCoinManager.CurrentCoins += challenge.mRewardCoins; //reward for completing challenge
-            }
+            };
         }
     }
     public void AddProgressToType(ChallengeType type, float amount)
@@ -55,9 +46,11 @@ public class SChallengeManager : MonoBehaviour
             if(challenge.mChallengeType == type && !challenge.mIsCompleted)
             {
                 challenge.AddProgress(amount);
+
                 if(challenge.mIsCompleted)
                 {
                     mCoinManager.CurrentCoins += challenge.mRewardCoins; //reward for completing challenge
+
                     if(challenge.mTimer != null && !challenge.mTimer.mTimerInProgress)
                     {
                         challenge.mTimer.startChallengeTimer();

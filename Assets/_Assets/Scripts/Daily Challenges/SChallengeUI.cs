@@ -9,14 +9,21 @@ public class SChallengeUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mDecriptionText;
     [SerializeField] private Slider mProgressBar;
     [SerializeField] private TextMeshProUGUI mTimerText;
+    private bool mDone = false;
 
     private SChallenges mChallenges;
     public void Start()
     {
-        mProgressBar.value = mChallenges.mCurrentValue;
+        mCompletedOverlay.SetActive(false);
+        if(!mChallenges.mTimer.mTimerInProgress)
+        {
+            mTimerText.text = "";
+        }
     }
     public void Setup(SChallenges challenges)
     {
+        CancelInvoke(nameof(UpdateTimerText));
+        mDone = false;
         mChallenges = challenges;
         if(challenges.mChallengeType == ChallengeType.CollectCoins) //changing default value to certain value 
         {
@@ -24,23 +31,18 @@ public class SChallengeUI : MonoBehaviour
         }
         if (challenges.mChallengeType == ChallengeType.ReachDistance)
         {
-            challenges.mCompletevalue = 50;
+            challenges.mCompletevalue = 100;
         }
-        if(challenges.mTimer != null && challenges.mTimer.mTimerInProgress)
+        if(challenges.mTimer != null && challenges.mTimer.mTimerInProgress && mDone == false)
         {
             InvokeRepeating(nameof(UpdateTimerText), 0f, 1f); //update UI every second if timer is in progress
+            mDone = true;
         }
         UpdateUI();
     }
-    private void Update()
-    {
-        if (mChallenges != null)
-        {
-            UpdateUI();
-        }
-    }
     private void UpdateUI()
     {
+        if(mChallenges == null) return;
         mNameText.text = mChallenges.name;
         mDecriptionText.text = mChallenges.mChallengeDescription;
         mProgressBar.value = mChallenges.mCurrentValue;
@@ -48,19 +50,23 @@ public class SChallengeUI : MonoBehaviour
     }
     public void ChallengeDoneUiUpdate()
     {
-        mCompletedOverlay.SetActive(true);
-        mProgressBar.value = 1f; // full progress
+        mProgressBar.value = mProgressBar.maxValue; // full progress
     }
     public void ResetUI()
     {
-        mCompletedOverlay.SetActive(false);
         mProgressBar.value = 0f; // reset progress
+        mTimerText.text = "";
     }
     private void UpdateTimerText()
     {
         if (mChallenges.mTimer != null && mChallenges.mTimer.mTimerInProgress)
         {
             mTimerText.text = mChallenges.mTimer.GetFormattedTime();
+        }
+        else
+        {
+            CancelInvoke(nameof(UpdateTimerText));
+            mDone = false;
         }
     }
 }

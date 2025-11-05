@@ -15,7 +15,7 @@ MonoBehaviour:
   mChallengeName: Distance
   mChallengeDescription: Going a total distance of 500
   mChallengeType: 1
-  mCompletevalue: 50
+  mCompletevalue: 100
   mCurrentValue: 0
   mRewardCoins: 50
   mIsCompleted: 0
